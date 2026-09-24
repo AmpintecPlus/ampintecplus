@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">AMPINTEC PLUS — SLM 金屬3D列印代工服務 一頁式網站</title>
+  <meta name="description" content="結合金屬3D列印與傳統機械加工，提供從設計到量產的 MIT 一站式精密製造解決方案。" data-i18n="meta.description">
+  <link rel="stylesheet" href="style.css">
+  <!-- LOGO 圖片的預加載 -->
+  <link rel="preload" href="images/AMPINTEC LOGO.png" as="image">
+</head>
+
+<body>
+  <!--
+    ====================================================================
+    ⚠️【全站文字統一維護提示 / Copy Maintenance Notice】
+    
+    本網站所有文字與多語系內容統一由 [ translations.js ] 檔案進行維護與管理。
+    修改任何網頁文字、標題或提示訊息，請直接編輯 [ translations.js ] 即可！
+    ====================================================================
+  -->
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container">
+      <a href="#hero" class="logo-container">
+        <img src="images/AMPINTEC LOGO.png" alt="AMPINTEC PLUS" class="logo-img">
+      </a>
+
+      <button class="nav-toggle" id="js-nav-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="js-nav-menu">
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="#technology" class="nav-link" data-i18n="nav.technology">核心技術</a></li>
+        <li><a href="#quality" class="nav-link" data-i18n="nav.quality">品質保證</a></li>
+        <li><a href="#materials" class="nav-link" data-i18n="nav.materials">材料選擇</a></li>
+        <li><a href="#equipment" class="nav-link" data-i18n="nav.equipment">產能設備</a></li>
+        <li><a href="#advantages" class="nav-link" data-i18n="nav.advantages">為什麼選擇我們</a></li>
+        <li><a href="#cases" class="nav-link" data-i18n="nav.cases">案例分享</a></li>
+        <li><a href="#faq" class="nav-link" data-i18n="nav.faq">常見問題</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">聯絡我們</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-switch" id="js-lang-switch">EN</button>
+        <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">免費諮詢</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" style="background-image: url('images/hero_bg.png');">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow" data-i18n="hero.eyebrow">SLM 金屬3D列印 代工製造服務</span>
+        <h1 class="hero-title" data-i18n="hero.title">精密製造 × 庫存最佳化<br>客製化解決方案 × ESG 綠色製造</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">結合金屬3D列印與傳統機械加工，提供從設計到量產的 MIT（Made in Taiwan）一站式解決方案</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_quote">免費諮詢</a>
+          <a href="#technology" class="btn btn-secondary" data-i18n="hero.cta_learn">了解服務</a>
+        </div>
+      </div>
+
+      <!-- 數據強調條 -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" id="stat-lead" data-i18n-attr="data-target:hero.stat_lead_val">0 天</span>
+          <span class="stat-label" data-i18n="hero.stat_lead_label">交期最快起</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="stat-precision" data-i18n-attr="data-target:hero.stat_precision_val">±0.0 mm</span>
+          <span class="stat-label" data-i18n="hero.stat_precision_label">公差精度 (媲美精密鑄造)</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="stat-cycle" data-i18n-attr="data-target:hero.stat_cycle_val">0%</span>
+          <span class="stat-label" data-i18n="hero.stat_cycle_label">研發週期最高縮短</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 我們解決的痛點 Section -->
+  <section class="section section-light" id="painpoints">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="painpoints.title">您在傳統製造中是否也遇到這些痛點？</h2>
+      </div>
+      <div class="painpoints-grid">
+        <!-- 痛點 1 -->
+        <div class="painpoint-card">
+          <div class="painpoint-card-header">
+            <span class="painpoint-icon">?</span>
+            <h4 class="painpoint-text" data-i18n="painpoints.q1">只比較單價數字，卻忽略了治具、庫存與失敗成本的「總體成本」？</h4>
+            <span class="painpoint-toggle">+</span>
+          </div>
+          <div class="painpoint-card-body">
+            <p class="painpoint-desc" data-i18n="painpoints.a1">
+              傳統開模具動輒10萬元以上，且設計只要微調往往就要重新開模或修模，實際工期常因溝通、修改、甚至結構讓步而超出預期；若把治具、庫存攤提與失敗重工都算進去，『總體成本』往往比報價單上的數字高出許多。SLM
+              金屬3D列印免開模、單價透明，從總體成本來看更具優勢。</p>
+          </div>
+        </div>
+        <!-- 痛點 2 -->
+        <div class="painpoint-card">
+          <div class="painpoint-card-header">
+            <span class="painpoint-icon">?</span>
+            <h4 class="painpoint-text" data-i18n="painpoints.q2">市場銷量預估不準，模具攤提變庫存壓力？</h4>
+            <span class="painpoint-toggle">+</span>
+          </div>
+          <div class="painpoint-card-body">
+            <p class="painpoint-desc" data-i18n="painpoints.a2">
+              市場銷售量預估常常失準——以為會大賣、模具費用可以順利攤提，但實務上可能根本賣不動，或不確定能否賣得動；資本已經投入且交期冗長，導致庫存囤積與資金卡死。以3D列印依實際需求按件生產，免去囤貨賭注。</p>
+          </div>
+        </div>
+        <!-- 痛點 3 -->
+        <div class="painpoint-card">
+          <div class="painpoint-card-header">
+            <span class="painpoint-icon">?</span>
+            <h4 class="painpoint-text" data-i18n="painpoints.q3">鑄造良率卡關，客訴成本比想像更高？</h4>
+            <span class="painpoint-toggle">+</span>
+          </div>
+          <div class="painpoint-card-body">
+            <p class="painpoint-desc" data-i18n="painpoints.a3">
+              一般鑄造毛胚即便驗證良率達8成，量產過程仍可能出現砂孔等缺陷，需要額外的人力處理，增加客訴與訂單流失的風險。SLM 金屬3D列印逐層熔融成型，內部品質更可控，降低不良率帶來的隱性成本。</p>
+          </div>
+        </div>
+        <!-- 痛點 4 -->
+        <div class="painpoint-card">
+          <div class="painpoint-card-header">
+            <span class="painpoint-icon">?</span>
+            <h4 class="painpoint-text" data-i18n="painpoints.q4">工程師說「這樣一定要做」，老師傅卻說「做不到」？</h4>
+            <span class="painpoint-toggle">+</span>
+          </div>
+          <div class="painpoint-card-body">
+            <p class="painpoint-desc" data-i18n="painpoints.a4">
+              工程師、設計師認為『這樣一定要做』，現場老師傅卻可能直接說『做不到』——傳統刀具與夾治具有幾何可達性限制，加上資深老師傅逐漸退休，經驗傳承出現斷層。SLM
+              金屬3D列印不受刀具可達性限制，能直接實現複雜幾何與內部流道，把設計圖原汁原味做出來。</p>
+          </div>
+        </div>
+      </div>
+      <div class="painpoints-summary" data-i18n="painpoints.summary">
+        免開模、零妥協，把不可能變成可面市的零件。不只3D列印，更給您最適合的製程方案。
+      </div>
+    </div>
+  </section>
+
+  <!-- 關於我們與品牌故事 Section -->
+  <section class="section section-light" id="about"
+    style="background-color: #FFFFFF; border-top: 1px solid rgba(26,26,26,0.05);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.about">關於我們</span>
+        <h2 class="section-title" data-i18n="about.title">品牌故事與創辦團隊</h2>
+      </div>
+
+      <div class="about-layout">
+        <!-- 發展歷程 -->
+        <div class="about-left">
+          <h3 data-i18n="about.timeline_title">發展歷程</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-year" data-i18n="about.t1_year">2015</div>
+              <p class="timeline-desc" data-i18n="about.t1_desc">
+                深耕機械產品工程與精密製造領域多年，看準積層製造正在改寫產業遊戲規則，攜手創業投入塑膠3D列印技術服務，協助客戶將設計概念快速轉化為實體驗證，奠定日後跨足金屬積層製造的技術基礎。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-year" data-i18n="about.t2_year">2018</div>
+              <p class="timeline-desc" data-i18n="about.t2_desc">
+                隨著航太產業帶動積層製造邁向標準化製程的全球趨勢，團隊正式投入金屬3D列印技術的應用設計與設備開發，建立起金屬列印的核心工程能力。</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-year" data-i18n="about.t3_year">2025</div>
+              <p class="timeline-desc" data-i18n="about.t3_desc">正式成立積層製造品牌 AMPINTEC PLUS，整合金屬3D列印與傳統機械加工，提供 MIT（Made in
+                Taiwan）一站式設計製造解決方案，並開始布局國際市場。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 創辦團隊 -->
+        <div class="about-right">
+          <h3 data-i18n="about.team_title"
+            style="font-size: 1.8rem; font-weight: 800; margin-bottom: 30px; position: relative; padding-bottom: 10px; border-bottom: 2px solid rgba(26,26,26,0.1); width: fit-content;">
+            創辦團隊</h3>
+          <div class="founders-grid">
+            <div class="founder-card">
+              <div class="founder-header">
+                <div class="founder-name" data-i18n="about.f1_name">黃博正 Bo-Jeng Huang</div>
+                <div class="founder-title" data-i18n="about.f1_title">創辦人 Founder</div>
+              </div>
+              <p class="founder-desc" data-i18n="about.f1_desc">擁有10年以上機械產品工程與專案管理經驗，曾領導團隊開發超高速氫能設備。是少數將 SLM
+                金屬3D列印應用於超高速旋轉機械的工程師，協助客戶降低20%碳排放；並透過積層製造扣件重新設計，將半導體產線維護效率提升200%。2025年創立 AMPINTEC
+                PLUS，致力於推動金屬積層製造的商業化應用。</p>
+            </div>
+            <div class="founder-card">
+              <div class="founder-header">
+                <div class="founder-name" data-i18n="about.f2_name">邱楷勛 Kai-Hsun Chiu</div>
+                <div class="founder-title" data-i18n="about.f2_title">共同創辦人 Co-Founder</div>
+              </div>
+              <p class="founder-desc" data-i18n="about.f2_desc">具備北非汽車自動化專案，以及中國、東南亞模具產線開發的跨國實務經驗，曾任全球前三大伺服器與筆電 ODM
+                廠資深機械工程師，深耕精密製造與供應鏈管理。2025年共同創立 AMPINTEC PLUS，負責整合傳統製造工藝與國際客戶開發。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心技術 Section -->
+  <section class="section section-dark" id="technology">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.technology">核心技術</span>
+        <h2 class="section-title" data-i18n="technology.title">核心技術與服務範疇</h2>
+      </div>
+
+      <!-- 三欄式流程 -->
+      <h3 data-i18n="technology.flow_title"
+        style="text-align: center; font-size: 1.6rem; font-weight: 800; margin-bottom: 40px; color: var(--color-white);">
+        一站式服務流程</h3>
+      <div class="tech-flow">
+        <div class="flow-card">
+          <span class="flow-num">01</span>
+          <div class="flow-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+            </svg>
+          </div>
+          <h4 data-i18n="technology.s1_title">創意構思 Model Design</h4>
+          <p class="flow-desc" data-i18n="technology.s1_desc">跳脫傳統設計限制，將想法化為實體</p>
+        </div>
+        <div class="flow-card">
+          <span class="flow-num">02</span>
+          <div class="flow-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+          </div>
+          <h4 data-i18n="technology.s2_title">SLM 列印製造 SLM Production</h4>
+          <p class="flow-desc" data-i18n="technology.s2_desc">SLM 金屬3D列印機，可信賴的精密製程</p>
+        </div>
+        <div class="flow-card">
+          <span class="flow-num">03</span>
+          <div class="flow-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+              <path d="M22 12A10 10 0 0 0 12 2v10z" />
+            </svg>
+          </div>
+          <h4 data-i18n="technology.s3_title">產品分析 Product Analysis</h4>
+          <p class="flow-desc" data-i18n="technology.s3_desc">品質性能分析，確保產品表現</p>
+        </div>
+      </div>
+
+      <!-- 加工能力 8 分類切換區 -->
+      <div class="capabilities-wrap">
+        <h3 data-i18n="technology.capability_title">全方位加工與後處理能力</h3>
+
+        <div class="cap-categories">
+          <button class="cap-cat-btn active" data-cat="am" data-i18n="technology.cap_cats.am">3D列印</button>
+          <button class="cap-cat-btn" data-cat="machining" data-i18n="technology.cap_cats.machining">機械加工</button>
+          <button class="cap-cat-btn" data-cat="laser" data-i18n="technology.cap_cats.laser">雷射</button>
+          <button class="cap-cat-btn" data-cat="waterjet" data-i18n="technology.cap_cats.waterjet">水刀</button>
+          <button class="cap-cat-btn" data-cat="polishing" data-i18n="technology.cap_cats.polishing">拋光</button>
+          <button class="cap-cat-btn" data-cat="welding" data-i18n="technology.cap_cats.welding">焊接</button>
+          <button class="cap-cat-btn" data-cat="casting" data-i18n="technology.cap_cats.casting">鑄造</button>
+          <button class="cap-cat-btn" data-cat="forging" data-i18n="technology.cap_cats.forging">鍛造</button>
+        </div>
+
+        <div class="cap-panels">
+          <!-- 3D列印面板 (預設 active) -->
+          <div class="cap-panel active" id="panel-am">
+            <div class="tech-categories">
+              <div class="category-card">
+                <h4 data-i18n="technology.cat1_title">FDM 塑膠積層列印 / FDM Plastic Additive Manufacturing</h4>
+                <p data-i18n="technology.cat1_desc">適合前期外觀驗證、快速打樣與治具製作，低成本高效能。</p>
+              </div>
+              <div class="category-card">
+                <h4 data-i18n="technology.cat2_title">SLA 光固化樹脂列印 / SLA Photosensitive Resin Printing</h4>
+                <p data-i18n="technology.cat2_desc">高表面細緻度，適合外觀打樣與精密驗證模型，最大成型尺寸 1400×700×600mm。</p>
+              </div>
+              <div class="category-card">
+                <h4 data-i18n="technology.cat3_title">SLS 尼龍碳纖列印 / SLS Nylon-PA CF Printing</h4>
+                <p data-i18n="technology.cat3_desc">高強度尼龍材料，適合功能性測試與高強度耐用零件，最大成型尺寸 200×400×400mm。</p>
+              </div>
+              <div class="category-card">
+                <h4 data-i18n="technology.cat4_title">SLM／LPBF／DMLS 金屬列印 / SLM／LPBF／DMLS Metal Printing</h4>
+                <p data-i18n="technology.cat4_desc">直接熔融金屬粉末，適合高強度、輕量化、複雜內部流道與航太/半導體零件，最大成型尺寸 300×300×300mm。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 機械加工面板 -->
+          <div class="cap-panel" id="panel-machining">
+            <div class="cap-panel-content">
+              <p class="panel-desc" data-i18n="technology.cap_panels.machining.desc">
+                結合車、銑、鑽、磨等傳統機械工法，並提供三軸至五軸數控加工，針對列印後的零件進行精密尺寸修整與表面處理。</p>
+              <div class="panel-details">
+                <span class="detail-label" data-i18n="technology.cap_panels.machining.sub_label">包含細項：</span>
+                <div class="panel-detail-badges">
+                  <span class="cap-detail-badge" data-i18n="technology.cap_panels.machining.sub1">車床</span>
+                  <span class="cap-detail-badge" data-i18n="technology.cap_panels.machining.sub2">銑床</span>
+                  <span class="cap-detail-badge" data-i18n="technology.cap_panels.machining.sub3">鑽床</span>
+                  <span class="cap-detail-badge" data-i18n="technology.cap_panels.machining.sub4">磨床</span>
+                  <span class="cap-detail-badge" data-i18n="technology.cap_panels.machining.sub5">三軸加工</span>
+                  <span class="cap-detail-badge" data-i18n="technology.cap_panels.machining.sub6">五軸加工</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 雷射面板 -->
+          <div class="cap-panel" id="panel-laser">
+            <div class="cap-panel-content">
+              <p class="panel-desc" data-i18n="technology.cap_panels.laser.desc">雷射切割／雷射熔接，適合薄板材料的高精度切割與局部熱處理應用。</p>
+            </div>
+          </div>
+
+          <!-- 水刀面板 -->
+          <div class="cap-panel" id="panel-waterjet">
+            <div class="cap-panel-content">
+              <p class="panel-desc" data-i18n="technology.cap_panels.waterjet.desc">水刀切割不受材料硬度與熱影響限制，適合厚板與複合材料的精密切割。</p>
+            </div>
+          </div>
+
+          <!-- 拋光面板 -->
+          <div class="cap-panel" id="panel-polishing">
+            <div class="cap-panel-content">
+              <p class="panel-desc" data-i18n="technology.cap_panels.polishing.desc">機械拋光與表面處理，可達 Ra 0.1～0.01 µm
+                等級的鏡面光澤。</p>
+            </div>
+          </div>
+
+          <!-- 焊接面板 -->
+          <div class="cap-panel" id="panel-welding">
+            <div class="cap-panel-content">
+              <p class="panel-desc" data-i18n="technology.cap_panels.welding.desc">精密焊接修補與組件接合，確保結構強度與密合度。</p>
+            </div>
+          </div>
+
+          <!-- 鑄造面板 -->
+          <div class="cap-panel" id="panel-casting">
+            <div class="cap-panel-content">
+              <p class="panel-desc" data-i18n="technology.cap_panels.casting.desc">傳統砂模／精密鑄造工藝，適合大尺寸零件或高量產需求的成本最佳化方案。
+              </p>
+            </div>
+          </div>
+
+          <!-- 鍛造面板 -->
+          <div class="cap-panel" id="panel-forging">
+            <div class="cap-panel-content">
+              <p class="panel-desc" data-i18n="technology.cap_panels.forging.desc">鍛造工藝強化金屬內部結晶結構，提升零件的機械強度與疲勞壽命。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品質保證與認證 Section -->
+  <section class="section section-light" id="quality">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.quality">品質保證</span>
+        <h2 class="section-title" data-i18n="quality.title">品質保證與檢測能力</h2>
+      </div>
+
+      <!-- 認證徽章 -->
+      <div class="quality-badges">
+        <div class="quality-badge">
+          <div class="badge-name" data-i18n="quality.b1_name">AS9100D</div>
+          <div class="badge-label" data-i18n="quality.b1_label">AEROSPACE STANDARD</div>
+        </div>
+        <div class="quality-badge">
+          <div class="badge-name" data-i18n="quality.b2_name">ISO 9001</div>
+          <div class="badge-label" data-i18n="quality.b2_label">QUALITY MANAGEMENT</div>
+        </div>
+
+        </div>
+
+      <!-- 公差對比 Before/After -->
+      <div class="compare-container">
+        <div class="compare-info">
+          <h3 data-i18n="quality.precision_title">公差精度顯著提升</h3>
+          <p data-i18n="quality.precision_desc1">精密孔徑與配合面公差，相較傳統鑄造或粗加工大幅優化：</p>
+          <img src="images/quality_scan.png" alt="Quality Scan"
+            style="width: 100%; border-radius: 4px; border: 1px solid rgba(26,26,26,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+        </div>
+        <div class="compare-cards">
+          <div class="compare-card">
+            <div class="compare-card-title" data-i18n="quality.compare1_title">薄壁列印能力</div>
+            <div class="compare-values">
+              <div class="comp-val val-before">
+                <span class="val-num" data-i18n="quality.p_before1">一般列印成型厚度 1mm</span>
+                <span class="val-lbl">Traditional</span>
+              </div>
+              <div class="comp-val val-after">
+                <span class="val-num" data-i18n="quality.p_after1">AMPINTEC PLUS 最薄 0.5mm</span>
+                <span class="val-lbl">AMPINTEC PLUS</span>
+              </div>
+            </div>
+            <div class="compare-card-note" data-i18n="quality.precision_note">*根據尺寸與GD&T要求而變化</div>
+          </div>
+          <div class="compare-card">
+            <div class="compare-card-title" data-i18n="quality.compare2_title">公差精度</div>
+            <div class="compare-values compare-values-single">
+              <div class="comp-val val-after">
+                <span class="val-num" data-i18n="quality.p_after2">媲美精密鑄造，公差 ±0.2mm</span>
+                <span class="val-lbl">AMPINTEC PLUS</span>
+              </div>
+            </div>
+            <div class="compare-card-note" data-i18n="quality.precision_note">*根據尺寸與GD&T要求而變化</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 檢測能力網格 -->
+      <h3 data-i18n="quality.detect_title"
+        style="text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 30px;">完善的檢測分析設備</h3>
+      <div class="detector-grid">
+        <div class="detector-card">
+          <span class="detector-icon">⚡</span>
+          <span class="detector-name" data-i18n="quality.d1">金相分析</span>
+        </div>
+        <div class="detector-card">
+          <span class="detector-icon">⚡</span>
+          <span class="detector-name" data-i18n="quality.d2">拉伸強度分析</span>
+        </div>
+        <div class="detector-card">
+          <span class="detector-icon">⚡</span>
+          <span class="detector-name" data-i18n="quality.d3">粒徑分析</span>
+        </div>
+        <div class="detector-card">
+          <span class="detector-icon">⚡</span>
+          <span class="detector-name" data-i18n="quality.d4">流動率分析</span>
+        </div>
+        <div class="detector-card">
+          <span class="detector-icon">⚡</span>
+          <span class="detector-name" data-i18n="quality.d5">3D掃描與三次元量測</span>
+        </div>
+        <div class="detector-card">
+          <span class="detector-icon">⚡</span>
+          <span class="detector-name" data-i18n="quality.d6">硬度分析</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 材料選擇 Section -->
+  <section class="section section-dark" id="materials">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.materials">材料選擇</span>
+        <h2 class="section-title" data-i18n="materials.title">材料選擇</h2>
+      </div>
+
+      <div class="materials-grid">
+        <div class="material-card">
+          <div class="material-icon">⚙️</div>
+          <span class="material-name" data-i18n="materials.m1">鋁合金 Aluminum Alloy</span>
+        </div>
+        <div class="material-card">
+          <div class="material-icon">⚙️</div>
+          <span class="material-name" data-i18n="materials.m2">鎳合金 Nickel Alloy</span>
+        </div>
+        <div class="material-card">
+          <div class="material-icon">⚙️</div>
+          <span class="material-name" data-i18n="materials.m3">鐵基合金 Iron-Based Alloy</span>
+        </div>
+        <div class="material-card">
+          <div class="material-icon">⚙️</div>
+          <span class="material-name" data-i18n="materials.m4">銅合金 Copper Alloy</span>
+        </div>
+        <div class="material-card">
+          <div class="material-icon">⚙️</div>
+          <span class="material-name" data-i18n="materials.m5">鈦合金 Titanium Alloy</span>
+        </div>
+        <div class="material-card">
+          <div class="material-icon">⚙️</div>
+          <span class="material-name" data-i18n="materials.m6">客製合金 Customized<br><small>(依客戶需求客製粉末成分)</small></span>
+        </div>
+      </div>
+
+      <div class="materials-lead">
+        <span data-i18n="materials.lead_magnet">3D列印金屬材料與傳統金屬材料機械性質對照表，詳細數據歡迎透過下方表單索取</span>
+        <a href="#contact" data-i18n="nav.cta">索取對照表</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 設備規格與產能 Section -->
+  <section class="section section-light" id="equipment">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.equipment">產能設備</span>
+        <h2 class="section-title" data-i18n="equipment.title">設備規格與產能</h2>
+      </div>
+
+      <div class="equipment-layout">
+        <!-- 尺寸表 -->
+        <div class="equipment-table-wrap">
+          <h3 data-i18n="equipment.table_title">成型尺寸規格表</h3>
+          <table class="eq-table">
+            <thead>
+              <tr>
+                <th data-i18n="equipment.col_type">設備製程 Type</th>
+                <th data-i18n="equipment.col_size">最大成型尺寸 Build Size (L×W×H, mm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="equipment.type_metal">SLM 金屬列印</td>
+                <td data-i18n="equipment.size_metal">300 × 300 × 300</td>
+              </tr>
+              <tr>
+                <td data-i18n="equipment.type_nylon">SLS 尼龍碳纖維</td>
+                <td data-i18n="equipment.size_nylon">200 × 400 × 400</td>
+              </tr>
+              <tr>
+                <td data-i18n="equipment.type_photo">SLA 光敏樹脂</td>
+                <td data-i18n="equipment.size_photo">1400 × 700 × 600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 為什麼選擇我們 Section -->
+  <section class="section section-light" id="advantages"
+    style="background-color: #FFFFFF; border-top: 1px solid rgba(26,26,26,0.05);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 8px;">
+        <span class="eyebrow" data-i18n="nav.advantages">量化評比</span>
+        <h2 class="section-title" data-i18n="advantages.title">為什麼選擇AMPINTEC</h2>
+        <p class="section-subtitle" style="font-size: 1.05rem; color: var(--color-gray-text); margin-top: 10px; margin-bottom: 0;" data-i18n="advantages.chart_title">（傳統製造、一般3D列印代工、AMPINTEC PLUS）量化評比</p>
+      </div>
+
+      <!-- 傳統 vs 一般 3D 列印代工 vs AMPINTEC PLUS 三方量化比較圖表 -->
+      <div class="vs-chart-wrap" id="js-advantages-chart-trigger">
+        <p style="text-align: center; margin-bottom: 25px; color: var(--color-gray-text); font-size: 0.9rem; margin-top: 30px;">
+          ※ <span data-i18n="advantages.chart_legend">示意性產業比較</span>
+        </p>
+
+        <!-- 圖例 Legend -->
+        <div class="chart-legend"
+          style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span
+              style="display: inline-block; width: 16px; height: 16px; background-color: var(--color-gray-text); border-radius: 3px;"></span>
+            <span style="font-size: 0.9rem; font-weight: 600;" data-i18n="advantages.legend_traditional">傳統製造
+              Traditional</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span
+              style="display: inline-block; width: 16px; height: 16px; background-color: #6B7A8F; border-radius: 3px;"></span>
+            <span style="font-size: 0.9rem; font-weight: 600;" data-i18n="advantages.legend_generic_am">一般3D列印代工 Generic
+              AM</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span
+              style="display: inline-block; width: 16px; height: 16px; background-color: var(--color-gold); border-radius: 3px; box-shadow: 0 0 5px rgba(201, 162, 39, 0.5);"></span>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-gold);"
+              data-i18n="advantages.legend_ampintec">AMPINTEC PLUS</span>
+          </div>
+        </div>
+
+        <!-- 8組條形圖 -->
+        <div class="advantages-chart">
+          <!-- 指標 1 -->
+          <div class="chart-row">
+            <div class="chart-label"><span data-i18n="advantages.label_fixture">治具/夾具成本 (越低越好)</span></div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="9" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">9</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="2" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">2</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="2" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 指標 2 -->
+          <div class="chart-row">
+            <div class="chart-label"><span data-i18n="advantages.label_lead">交貨時間 (越低越好)</span></div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="8" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">8</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="3" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">3</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="2" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 指標 3 -->
+          <div class="chart-row">
+            <div class="chart-label"><span data-i18n="advantages.label_labor">人工成本 (越低越好)</span></div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="9" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">9</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="5" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">5</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="4" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">4</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 指標 4 -->
+          <div class="chart-row">
+            <div class="chart-label"><span data-i18n="advantages.label_moq">最小訂購量 (越低越好)</span></div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="9" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">9</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="2" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">2</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="1" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 指標 5 -->
+          <div class="chart-row">
+            <div class="chart-label"><span data-i18n="advantages.label_inv">庫存與倉儲成本 (越低越好)</span></div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="8" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">8</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="3" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">3</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="2" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 指標 6 -->
+          <div class="chart-row">
+            <div class="chart-label"><span data-i18n="advantages.label_env">環境適應性/客製彈性 (越高越好)</span></div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="3" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">3</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="7" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">7</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="9" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">9</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 指標 7 -->
+          <div class="chart-row">
+            <div class="chart-label"><span data-i18n="advantages.label_cost">成本效益 (中小量，越高越好)</span></div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="3" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">3</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="6" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">6</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="9" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">9</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 指標 8 (Highlight) -->
+          <div class="chart-row highlight-row">
+            <div class="chart-label" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
+              <span style="font-weight: 800;" data-i18n="advantages.label_integration">製程整合度 (3D列印+傳統加工，越高越好)</span>
+              <small style="font-size: 0.75rem; color: var(--color-gold); font-weight: 500;"
+                data-i18n="advantages.integration_note">※ 製程整合度為 AMPINTEC PLUS 的核心差異化優勢</small>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_traditional">傳統製造</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-traditional" data-score="6" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">6</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_generic_am">一般3D列印代工</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-generic-am" data-score="4" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">4</span>
+              </div>
+              <div class="chart-bar-container">
+                <span class="bar-name" data-i18n="advantages.bar_ampintec">AMPINTEC PLUS</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-ampintec" data-score="10" style="width: 0%;"></div>
+                </div>
+                <span class="bar-val">10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 研發週期縮短案例 -->
+      <div class="cycle-case-wrap" id="js-cycle-trigger">
+        <h3 data-i18n="advantages.cycle_title">研發週期縮短案例</h3>
+        <p style="text-align: center; margin-bottom: 25px;" data-i18n="advantages.cycle_desc">特殊流道零件設計與製造週期：</p>
+        <div class="cycle-bars">
+          <div class="cycle-bar-item">
+            <span class="cycle-bar-lbl" data-i18n="advantages.cycle_trad">傳統製造：3個月</span>
+            <div class="cycle-bar-outer">
+              <div class="cycle-bar-inner bar-trad"></div>
+            </div>
+          </div>
+          <div class="cycle-bar-item">
+            <span class="cycle-bar-lbl" data-i18n="advantages.cycle_am">AMPINTEC PLUS：2週</span>
+            <div class="cycle-bar-outer">
+              <div class="cycle-bar-inner bar-am" id="js-cycle-am-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 為什麼選擇台灣製造 -->
+      <div class="mit-wrap">
+        <h3 data-i18n="advantages.mit_title">為什麼選擇台灣製造 (Made In Taiwan)</h3>
+        <div class="mit-table-wrap">
+          <table class="mit-table">
+            <thead>
+              <tr>
+                <th data-i18n="advantages.col_aspect">比較面向</th>
+                <th data-i18n="advantages.col_oversea">海外代工常見風險</th>
+                <th data-i18n="advantages.col_mit">AMPINTEC PLUS (台灣製造)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="advantages.mit_log">物流與報關</td>
+                <td data-i18n="advantages.mit_log_o">流程繁瑣、時間長</td>
+                <td data-i18n="advantages.mit_log_m">國內快速到貨</td>
+              </tr>
+              <tr>
+                <td data-i18n="advantages.mit_comm">工程溝通</td>
+                <td data-i18n="advantages.mit_comm_o">時差/語言隔閡，全檢風險高</td>
+                <td data-i18n="advantages.mit_comm_m">同語言即時對接，降低誤差</td>
+              </tr>
+              <tr>
+                <td data-i18n="advantages.mit_lead">交期穩定性</td>
+                <td data-i18n="advantages.mit_lead_o">延誤機率較高</td>
+                <td data-i18n="advantages.mit_lead_m">透明排程、即時更新</td>
+              </tr>
+              <tr>
+                <td data-i18n="advantages.mit_ip">智財與保密</td>
+                <td data-i18n="advantages.mit_ip_o">技術外流風險</td>
+                <td data-i18n="advantages.mit_ip_m">受台灣法律保障，可簽署 NDA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 案例分享 Section -->
+  <section class="section section-light" id="cases" style="background-color: #F7F7F8;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.cases">案例分享</span>
+        <h2 class="section-title" data-i18n="cases.title">案例分享</h2>
+      </div>
+
+      <!-- 產業趨勢案例 -->
+      <div class="cases-subsection">
+        <h3 class="cases-subtitle" data-i18n="cases.benchmark_title">國際產業趨勢案例</h3>
+        <p class="cases-note" data-i18n="cases.benchmark_note">※ 以下為公開產業案例，非本公司製造，僅作技術趨勢與可行性說明</p>
+        <div class="cases-grid">
+          <!-- SpaceX -->
+          <a class="case-card case-card-link" href="https://www.teslaoracle.com/2024/08/08/raptor-3-starship-engine-is-lighter-less-complicated-but-more-powerful-and-reusable/" target="_blank" rel="noopener noreferrer">
+            <div class="case-card-img-wrap">
+              <div class="case-card-img" style="background-image: url('images/國際產業趨勢案例的圖片/SpaceX Raptor 火箭引擎.png')"></div>
+              <span class="case-card-source" data-i18n="cases.spacex_source">圖片來源：SpaceX</span>
+            </div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.spacex_title">SpaceX Raptor 火箭引擎</h4>
+              <p class="case-card-desc" data-i18n="cases.spacex_desc">利用金屬3D列印大幅提升推力與重量比，簡化複雜內部流道與組件結構。</p>
+              <span class="case-card-ref" data-i18n="cases.ref_label">🔗 查看參考資料</span>
+            </div>
+          </a>
+          <!-- LEAP71 -->
+          <a class="case-card case-card-link" href="https://leap71.com/" target="_blank" rel="noopener noreferrer">
+            <div class="case-card-img-wrap">
+              <div class="case-card-img" style="background-image: url('images/國際產業趨勢案例的圖片/LEAP71 AI 應用火箭推進器.png')"></div>
+              <span class="case-card-source" data-i18n="cases.leap71_source">圖片來源：LEAP71 / Noxon</span>
+            </div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.leap71_title">LEAP71 火箭推進器</h4>
+              <p class="case-card-desc" data-i18n="cases.leap71_desc">20kN推力火箭推進器與高效熱交換器，採用銅合金 (CuCrZr) 材料列印。</p>
+              <span class="case-card-ref" data-i18n="cases.ref_label">🔗 查看參考資料</span>
+            </div>
+          </a>
+          <!-- Lions Racing -->
+          <a class="case-card case-card-link" href="https://resources.ntop.com/resources/blog/design-tips-structural-optimization-lightweighting/" target="_blank" rel="noopener noreferrer">
+            <div class="case-card-img-wrap">
+              <div class="case-card-img" style="background-image: url('images/國際產業趨勢案例的圖片/nTop × Lions Racing Team.png')"></div>
+              <span class="case-card-source" data-i18n="cases.lions_source">圖片來源：nTopology</span>
+            </div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.lions_title">nTop × Lions Racing Team</h4>
+              <p class="case-card-desc" data-i18n="cases.lions_desc">學生方程式賽車懸吊與底盤輕量化零件，採用鋁合金與鈦合金列印優化。</p>
+              <span class="case-card-ref" data-i18n="cases.ref_label">🔗 查看參考資料</span>
+            </div>
+          </a>
+          <!-- Apple -->
+          <a class="case-card case-card-link" href="https://www.apple.com/tw/newsroom/2025/11/mapping-the-future-with-3d-printed-titanium-apple-watch-cases/" target="_blank" rel="noopener noreferrer">
+            <div class="case-card-img-wrap">
+              <div class="case-card-img" style="background-image: url('images/國際產業趨勢案例的圖片/Apple Watch 鈦合金零件.png')"></div>
+              <span class="case-card-source" data-i18n="cases.apple_source">圖片來源：Apple Newsroom</span>
+            </div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.apple_title">Apple Watch 鈦合金零件</h4>
+              <p class="case-card-desc" data-i18n="cases.apple_desc">消費電子產品導入鈦合金 3D 列印技術，實現輕量化與高強度結構。</p>
+              <span class="case-card-ref" data-i18n="cases.ref_label">🔗 查看參考資料</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- AMPINTEC 實績 -->
+      <div class="cases-subsection">
+        <h3 class="cases-subtitle" data-i18n="cases.real_title">AMPINTEC 技術與加工實績</h3>
+        <p class="cases-note" data-i18n="cases.real_note">※ 結合積層製造與後處理，提供高精度高附加價值之零件</p>
+        <div class="cases-grid cases-real-grid">
+          <!-- 半導體產業 -->
+          <div class="case-card">
+            <div class="case-card-img" style="background-image: url('images/AMPINTEC 技術與加工實績的圖片/半導體產業.png');"></div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.semi_title">半導體產業</h4>
+              <p class="case-card-desc" data-i18n="cases.semi_desc">組裝時間由 60–120 秒縮短至 3–5 秒（每批3000件）</p>
+            </div>
+          </div>
+          <!-- 精密產業 -->
+          <div class="case-card">
+            <div class="case-card-img" style="background-image: url('images/AMPINTEC 技術與加工實績的圖片/精密工業.png');"></div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.smooth_title">精密產業</h4>
+              <p class="case-card-desc" data-i18n="cases.smooth_desc">超光滑鏡面處理 Ra 0.1～0.01 µm</p>
+            </div>
+          </div>
+          <!-- 微孔道加工 -->
+          <div class="case-card">
+            <div class="case-card-img" style="background-image: url('images/case_microhole.png');"></div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.hole_title">微孔道加工</h4>
+              <p class="case-card-desc" data-i18n="cases.hole_desc">直徑<1mm、深度90mm 鈦合金孔</p>
+            </div>
+          </div>
+          <!-- 高速渦輪列印 -->
+          <div class="case-card">
+            <div class="case-card-img" style="background-image: url('images/case_turbine.png');"></div>
+            <div class="case-card-content">
+              <h4 class="case-card-title" data-i18n="cases.turbine_title">高速渦輪列印</h4>
+              <p class="case-card-desc" data-i18n="cases.turbine_desc">上萬 RPM 高速渦輪，Tip Speed 超過 100 m/s 的金屬列印案例</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 還能為您做什麼 Section -->
+  <section class="section section-dark" id="applications">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="applications.title">我們還能為您做什麼？</h2>
+      </div>
+
+      <div class="apps-grid">
+        <div class="app-card">
+          <div class="app-icon">💡</div>
+          <h4 data-i18n="applications.a1_title">展覽用品快速製作</h4>
+          <p data-i18n="applications.a1_desc">快速製作高精度的產品模型與樣品，專供展覽與行銷展示使用。</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">⚡</div>
+          <h4 data-i18n="applications.a2_title">快速樣品打樣</h4>
+          <p data-i18n="applications.a2_desc">在產品開發初期提供快速原型樣品，縮短研發驗證時程，加速面市速度。</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🔧</div>
+          <h4 data-i18n="applications.a3_title">產品升級與改良</h4>
+          <p data-i18n="applications.a3_desc">透過拓樸優化與輕量化重新設計，升級現有零件的性能、壽命與耐用度。</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">📊</div>
+          <h4 data-i18n="applications.a4_title">物料需求規劃顧問</h4>
+          <p data-i18n="applications.a4_desc">提供積層製造材料需求與 MRP 顧問諮詢服務，最佳化供應鏈與庫存成本。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常見問題 Section -->
+  <section class="section section-light" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.faq">常見問題</span>
+        <h2 class="section-title" data-i18n="faq.title">常見問題 FAQ</h2>
+      </div>
+
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faq.q1">最小訂購量是多少？</div>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq.a1">
+              SLM 列印不受傳統模具限制，單件即可起印生產。我們會依據零件的複雜度、體積與所選用的材料進行合理報價，非常適合試製打樣或少量客製化生產。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faq.q2">交期大概需要多久？</div>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq.a2">
+              一般原型樣品約 14 至 30 天不等。正式量產交期會依據訂單數量、排程以及是否需要後續 CNC 精加工、熱處理、拋光等後處理需求進行評估，下單前皆會提供明確排程。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faq.q3">圖檔需要提供什麼格式？</div>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq.a3">
+              我們建議提供 STEP (.step / .stp) 或 IGES (.igs) 等 3D CAD 格式。若有 2D 圖面，我們亦可協助進行工程評估與轉檔。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faq.q4">我們的機密圖檔是否安全？</div>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq.a4">
+              AMPINTEC PLUS 所有的列印製造與加工皆在台灣本地進行，受台灣智慧財產權法律嚴格保障。我們在收到圖檔評估前，可配合貴司簽署 NDA 保密協議，確保技術不外流。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" data-i18n="faq.q5">可以接受小量客製或試做嗎？</div>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq.a5">
+              可以，這正是我們的核心優勢之一。AMPINTEC PLUS 特別適合中小量客製化生產、研發驗證、或是高精密航太/半導體零件的試做。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡我們 Section -->
+  <section class="section section-light" id="contact"
+    style="background-color: #FFFFFF; border-top: 1px solid rgba(26,26,26,0.05);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" data-i18n="nav.contact">聯絡我們</span>
+        <h2 class="section-title" data-i18n="contact.title">聯絡我們</h2>
+      </div>
+
+      <div class="contact-layout">
+        <!-- 聯絡資訊 -->
+        <div class="contact-info">
+          <h3 data-i18n="contact.info_title">聯絡資訊</h3>
+          <p class="contact-info-desc" data-i18n="contact.info_desc">填寫表單，我們將在 1–2 個工作日內由專人與您聯繫回覆。</p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon">✉️</span>
+              <div>
+                <span class="contact-detail-label">Email</span>
+                <div class="contact-detail-val" data-i18n="contact.email_val">sales@ampintecplus.com</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon">📞</span>
+              <div>
+                <span class="contact-detail-label" data-i18n="contact.phone_label">聯絡電話</span>
+                <div class="contact-detail-val" data-i18n="contact.phone_val">+886 975 067 383</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 聯絡表單 -->
+        <form class="contact-form" id="js-contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="company" data-i18n="contact.label_company">公司名稱 *</label>
+              <input class="form-input" type="text" id="company" required
+                data-i18n-placeholder="contact.placeholder_company" placeholder="請輸入您的公司名稱">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="name" data-i18n="contact.label_name">姓名 *</label>
+              <input class="form-input" type="text" id="name" required data-i18n-placeholder="contact.placeholder_name"
+                placeholder="請輸入您的聯絡姓名">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="job" data-i18n="contact.label_job">職稱</label>
+              <input class="form-input" type="text" id="job" data-i18n-placeholder="contact.placeholder_job"
+                placeholder="請輸入您的職稱 (選填)">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email" data-i18n="contact.label_email">Email *</label>
+              <input class="form-input" type="email" id="email" required
+                data-i18n-placeholder="contact.placeholder_email" placeholder="example@domain.com">
+            </div>
+            <div class="form-group form-group-full">
+              <label class="form-label" for="phone" data-i18n="contact.label_phone">聯絡電話 *</label>
+              <input class="form-input" type="tel" id="phone" required data-i18n-placeholder="contact.placeholder_phone"
+                placeholder="請輸入您的電話號碼">
+            </div>
+            <div class="form-group form-group-full">
+              <label class="form-label" for="description" data-i18n="contact.label_desc">產品需求敘述 *</label>
+              <textarea class="form-input" id="description" required data-i18n-placeholder="contact.placeholder_desc"
+                placeholder="請簡述您的專案需求、列印材料偏好或尺寸等資訊..."></textarea>
+            </div>
+          </div>
+
+          <label class="form-consent" for="consent">
+            <input type="checkbox" id="consent" required>
+            <span data-i18n="contact.label_consent">我同意 AMPINTEC PLUS 依本表單內容與我聯繫</span>
+          </label>
+
+          <button class="btn btn-primary" type="submit" style="width: 100%;"
+            data-i18n="contact.btn_submit">送出諮詢需求</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast 提示元件 -->
+  <div class="toast" id="js-toast">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="js-toast-text"></span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/AMPINTEC LOGO.png" alt="AMPINTEC PLUS" class="footer-logo">
+          <p class="footer-slogan" data-i18n="footer.slogan">精密製造 × 庫存最佳化 × 客製化解決方案 × ESG 綠色製造</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.nav_title">網站導覽</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav.about">關於我們</a></li>
+            <li><a href="#technology" data-i18n="nav.technology">核心技術</a></li>
+            <li><a href="#quality" data-i18n="nav.quality">品質保證</a></li>
+            <li><a href="#materials" data-i18n="nav.materials">材料選擇</a></li>
+            <li><a href="#equipment" data-i18n="nav.equipment">產能設備</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contact_title">聯絡資訊</h4>
+          <div class="footer-contact-details">
+            <div class="footer-c-item">
+              <span>Email</span>
+              <span>sales@ampintecplus.com</span>
+            </div>
+            <div class="footer-c-item">
+              <span>Tel</span>
+              <span>+886 975 067 383</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-badges">
+          <span class="footer-badge-item">AS9100D</span>
+          <span class="footer-badge-item">ISO 9001</span>
+        </div>
+        <p class="copyright" data-i18n="footer.rights">© 2026 AMPINTEC PLUS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 載入翻譯與邏輯腳本 -->
+  <script src="translations.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
