@@ -29,7 +29,7 @@ const translations = {
     hero: {
       eyebrow: "金屬3D列印 專業製造",
       title: "精密製造 × 庫存最佳化<br>客製化解決方案 × ESG 綠色製造",
-      subtitle: "結合金屬3D列印與精密機械加工，提供從設計到量產的<span style=\"white-space: nowrap;\">MIT（Made in Taiwan）一站式解決方案</span>",
+      subtitle: "結合金屬3D列印與精密機械加工，可提供從設計到量產的<span style=\"white-space: nowrap;\">MIT（Made in Taiwan）一站式解決方案</span>",
       cta_learn: "了解服務",
       cta_quote: "免費諮詢",
       stat_precision: "±0.2 mm",

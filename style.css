@@ -1829,6 +1829,11 @@ textarea.form-input {
     margin-bottom: 25px;
   }
 
+  /* 手機版：覆寫 translations.js 中的 white-space: nowrap，讓長句可以正常換行 */
+  .hero-subtitle span[style*="white-space"] {
+    white-space: normal !important;
+  }
+
   .hero-btns {
     flex-direction: column;
   }
