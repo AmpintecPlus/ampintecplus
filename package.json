@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "build:test": "eleventy --pathprefix=/ampintecplus/"
+    "build:test": "eleventy --pathprefix=/ampintecplus/",
+    "check": "node scripts/check-i18n-keys.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
