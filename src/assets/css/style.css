@@ -2202,3 +2202,14 @@ a.case-card-link:hover .case-card-ref {
     align-self: flex-end;
   }
 }
+/* --- Reduced Motion 支援（T06 新增，不影響預設視覺） --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
