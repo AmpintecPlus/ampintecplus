@@ -1,7 +1,115 @@
 ---
 layout: base.njk
-title: Home
-description: AMPINTEC PLUS provides metal 3D printing (SLM/LPBF) manufacturing and one-stop post-processing services combined with precision machining, Made in Taiwan. (Full copy to be added in T08.)
+title: Metal 3D Printing Manufacturing Services in Taiwan
+description: AMPINTEC PLUS combines metal 3D printing (SLM/LPBF) with precision machining to deliver a Made-in-Taiwan, design-to-production one-stop solution, with lead times starting from 7 days and tolerances rivaling precision casting.
 ---
-<h1>AMPINTEC PLUS (T08 TODO: homepage content)</h1>
-<p>This is placeholder content for validating the T05 shared layout. Real homepage copy and sections will be added in T08 per SPEC_網站規格.md §2.</p>
+{% set i = i18n.en %}
+
+<!-- Hero Section -->
+<section class="hero" id="hero" style="background-image: url('{{ '/assets/img/hero-bg.webp' | url }}');">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-eyebrow">{{ i.hero.eyebrow }}</span>
+      <h1 class="hero-title">{{ i.hero.title | safe }}</h1>
+      <p class="hero-subtitle">{{ i.hero.subtitle | safe }}</p>
+      <div class="hero-btns">
+        <a href="{{ ('/en/contact/') | url }}" class="btn btn-primary">{{ i.hero.cta_quote }}</a>
+        <a href="{{ ('/en/services/') | url }}" class="btn btn-secondary">{{ i.hero.cta_learn }}</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number" id="stat-lead" data-target="{{ i.hero.stat_lead_val }}">{{ i.hero.stat_lead }}</span>
+        <span class="stat-label">{{ i.hero.stat_lead_label }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="stat-precision" data-target="{{ i.hero.stat_precision_val }}">{{ i.hero.stat_precision }}</span>
+        <span class="stat-label">{{ i.hero.stat_precision_label }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="stat-cycle" data-target="{{ i.hero.stat_cycle_val }}">{{ i.hero.stat_cycle }}</span>
+        <span class="stat-label">{{ i.hero.stat_cycle_label }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain Points Section -->
+<section class="section section-light" id="painpoints">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ i.painpoints.title }}</h2>
+    </div>
+    <div class="painpoints-grid">
+      {%- for n in [1,2,3,4] %}
+      <div class="painpoint-card">
+        <div class="painpoint-card-header">
+          <span class="painpoint-icon">?</span>
+          <h4 class="painpoint-text">{{ i.painpoints['q' ~ n] }}</h4>
+          <span class="painpoint-toggle">+</span>
+        </div>
+        <div class="painpoint-card-body">
+          <p class="painpoint-desc">{{ i.painpoints['a' ~ n] }}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <div class="painpoints-summary">{{ i.painpoints.summary }}</div>
+  </div>
+</section>
+
+<!-- Services Overview Section -->
+<section class="section section-dark" id="services-overview">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.services_eyebrow }}</span>
+      <h2 class="section-title">{{ i.home.services_title }}</h2>
+    </div>
+    <div class="services-overview-grid">
+      <a href="{{ ('/en/services/lpbf-metal-3d-printing/') | url }}" class="service-card">
+        <h3>{{ i.home.service_lpbf_title }}</h3>
+        <p>{{ i.home.service_lpbf_desc }}</p>
+        <span class="service-card-link">{{ i.home.services_cta }} →</span>
+      </a>
+      <a href="{{ ('/en/services/post-processing/') | url }}" class="service-card">
+        <h3>{{ i.home.service_post_title }}</h3>
+        <p>{{ i.home.service_post_desc }}</p>
+        <span class="service-card-link">{{ i.home.services_cta }} →</span>
+      </a>
+      <a href="{{ ('/en/services/obsolete-spare-parts/') | url }}" class="service-card">
+        <h3>{{ i.home.service_obsolete_title }}</h3>
+        <p>{{ i.home.service_obsolete_desc }}</p>
+        <span class="service-card-link">{{ i.home.services_cta }} →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="section section-light" id="certifications">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.cert_eyebrow }}</span>
+    </div>
+    <div class="quality-badges">
+      <div class="quality-badge">
+        <div class="badge-name">{{ i.quality.b1_name }}</div>
+      </div>
+      <div class="quality-badge">
+        <div class="badge-name">{{ i.quality.b2_name }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section section-dark" id="home-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/en/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>

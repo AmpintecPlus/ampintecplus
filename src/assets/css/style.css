@@ -2213,3 +2213,58 @@ a.case-card-link:hover .case-card-ref {
     scroll-behavior: auto !important;
   }
 }
+
+/* --- T08: 首頁服務摘要卡片（新增，沿用既有設計變數與風格） --- */
+.services-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background-color: var(--color-dark-card);
+  border: 1px solid var(--color-border-dark);
+  border-radius: 12px;
+  padding: 35px;
+  display: block;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--color-white);
+}
+
+.service-card p {
+  color: var(--color-light-gray-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.service-card-link {
+  display: inline-block;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.services-cta-wrap,
+.home-cta-wrap {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .services-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}

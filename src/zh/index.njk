@@ -1,7 +1,115 @@
 ---
 layout: base.njk
-title: 首頁
-description: AMPINTEC PLUS 提供金屬3D列印（SLM/LPBF）代工與一站式後處理服務，結合精密機械加工，MIT 製造。（T08 將依 SPEC 補齊完整描述）
+title: 金屬3D列印代工服務｜台灣MIT精密製造
+description: AMPINTEC PLUS 結合金屬3D列印（SLM/LPBF）與傳統機械加工，提供從設計到量產的台灣MIT一站式精密製造解決方案，交期最快7天起，公差精度媲美精密鑄造。
 ---
-<h1>AMPINTEC PLUS（T08 待補：首頁內容）</h1>
-<p>本頁為 T05 共用 layout 驗證用的暫時內容，實際首頁文案與區塊將在 T08 依 SPEC_網站規格.md §2 填入。</p>
+{% set i = i18n.zh %}
+
+<!-- Hero Section -->
+<section class="hero" id="hero" style="background-image: url('{{ '/assets/img/hero-bg.webp' | url }}');">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-eyebrow">{{ i.hero.eyebrow }}</span>
+      <h1 class="hero-title">{{ i.hero.title | safe }}</h1>
+      <p class="hero-subtitle">{{ i.hero.subtitle | safe }}</p>
+      <div class="hero-btns">
+        <a href="{{ ('/zh/contact/') | url }}" class="btn btn-primary">{{ i.hero.cta_quote }}</a>
+        <a href="{{ ('/zh/services/') | url }}" class="btn btn-secondary">{{ i.hero.cta_learn }}</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number" id="stat-lead" data-target="{{ i.hero.stat_lead_val }}">{{ i.hero.stat_lead }}</span>
+        <span class="stat-label">{{ i.hero.stat_lead_label }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="stat-precision" data-target="{{ i.hero.stat_precision_val }}">{{ i.hero.stat_precision }}</span>
+        <span class="stat-label">{{ i.hero.stat_precision_label }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="stat-cycle" data-target="{{ i.hero.stat_cycle_val }}">{{ i.hero.stat_cycle }}</span>
+        <span class="stat-label">{{ i.hero.stat_cycle_label }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 我們解決的痛點 Section -->
+<section class="section section-light" id="painpoints">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ i.painpoints.title }}</h2>
+    </div>
+    <div class="painpoints-grid">
+      {%- for n in [1,2,3,4] %}
+      <div class="painpoint-card">
+        <div class="painpoint-card-header">
+          <span class="painpoint-icon">?</span>
+          <h4 class="painpoint-text">{{ i.painpoints['q' ~ n] }}</h4>
+          <span class="painpoint-toggle">+</span>
+        </div>
+        <div class="painpoint-card-body">
+          <p class="painpoint-desc">{{ i.painpoints['a' ~ n] }}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <div class="painpoints-summary">{{ i.painpoints.summary }}</div>
+  </div>
+</section>
+
+<!-- 服務摘要 Section -->
+<section class="section section-dark" id="services-overview">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.services_eyebrow }}</span>
+      <h2 class="section-title">{{ i.home.services_title }}</h2>
+    </div>
+    <div class="services-overview-grid">
+      <a href="{{ ('/zh/services/lpbf-metal-3d-printing/') | url }}" class="service-card">
+        <h3>{{ i.home.service_lpbf_title }}</h3>
+        <p>{{ i.home.service_lpbf_desc }}</p>
+        <span class="service-card-link">{{ i.home.services_cta }} →</span>
+      </a>
+      <a href="{{ ('/zh/services/post-processing/') | url }}" class="service-card">
+        <h3>{{ i.home.service_post_title }}</h3>
+        <p>{{ i.home.service_post_desc }}</p>
+        <span class="service-card-link">{{ i.home.services_cta }} →</span>
+      </a>
+      <a href="{{ ('/zh/services/obsolete-spare-parts/') | url }}" class="service-card">
+        <h3>{{ i.home.service_obsolete_title }}</h3>
+        <p>{{ i.home.service_obsolete_desc }}</p>
+        <span class="service-card-link">{{ i.home.services_cta }} →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 認證 Section -->
+<section class="section section-light" id="certifications">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.cert_eyebrow }}</span>
+    </div>
+    <div class="quality-badges">
+      <div class="quality-badge">
+        <div class="badge-name">{{ i.quality.b1_name }}</div>
+      </div>
+      <div class="quality-badge">
+        <div class="badge-name">{{ i.quality.b2_name }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section section-dark" id="home-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/zh/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>

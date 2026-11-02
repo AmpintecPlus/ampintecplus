@@ -286,5 +286,18 @@
     "rights": "© 2026 AMPINTEC PLUS. All rights reserved.",
     "nav_title": "網站導覽",
     "contact_title": "聯絡資訊"
+  },
+  "home": {
+    "services_eyebrow": "我們的服務",
+    "services_title": "一站式金屬3D列印解決方案",
+    "service_lpbf_title": "LPBF／SLM 金屬列印",
+    "service_lpbf_desc": "直接熔融金屬粉末，適合高強度、輕量化、複雜內部流道的航太與半導體零件。",
+    "service_post_title": "一站式後處理",
+    "service_post_desc": "機械加工、雷射、水刀、拋光、焊接、鑄造、鍛造，從列印到交件一次完成。",
+    "service_obsolete_title": "停產備品",
+    "service_obsolete_desc": "免開模逆向製作停產零件，少量需求也能快速供應。",
+    "services_cta": "查看完整服務",
+    "cert_eyebrow": "品質保證",
+    "cta_title": "準備開始您的專案？"
   }
 }

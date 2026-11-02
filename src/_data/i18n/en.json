@@ -286,5 +286,18 @@
     "rights": "© 2026 AMPINTEC PLUS. All rights reserved.",
     "nav_title": "Navigation",
     "contact_title": "Contact Info"
+  },
+  "home": {
+    "services_eyebrow": "Our Services",
+    "services_title": "One-Stop Metal 3D Printing Solutions",
+    "service_lpbf_title": "LPBF/SLM Metal 3D Printing",
+    "service_lpbf_desc": "Direct metal powder melting for high-strength, lightweight, complex internal channels in aerospace and semiconductor parts.",
+    "service_post_title": "One-Stop Post-Processing",
+    "service_post_desc": "Machining, laser, waterjet, polishing, welding, casting, and forging — from printing to delivery in one place.",
+    "service_obsolete_title": "Obsolete Spare Parts",
+    "service_obsolete_desc": "Tooling-free reverse engineering of discontinued parts, with fast turnaround even for small quantities.",
+    "services_cta": "View All Services",
+    "cert_eyebrow": "Quality Assurance",
+    "cta_title": "Ready to Start Your Project?"
   }
 }
