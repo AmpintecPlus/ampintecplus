@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{%- set altLang = 'en' if lang == 'zh' else 'zh' -%}
+{%- set zhUrl = page.url | replace('/' ~ lang ~ '/', '/zh/') -%}
+{%- set enUrl = page.url | replace('/' ~ lang ~ '/', '/en/') -%}
+{%- set altUrl = enUrl if lang == 'zh' else zhUrl -%}
+<html lang="{{ 'zh-Hant-TW' if lang == 'zh' else 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ title }} | AMPINTEC PLUS</title>
+  <meta name="description" content="{{ description }}">
+
+  <link rel="canonical" href="{{ site.siteUrl }}{{ page.url }}">
+  <link rel="alternate" hreflang="zh-TW" href="{{ site.siteUrl }}{{ zhUrl }}">
+  <link rel="alternate" hreflang="en" href="{{ site.siteUrl }}{{ enUrl }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.siteUrl }}{{ enUrl }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AMPINTEC PLUS">
+  <meta property="og:title" content="{{ title }} | AMPINTEC PLUS">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ site.siteUrl }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.siteUrl }}/assets/img/og-default.webp">
+  <meta property="og:locale" content="{{ 'zh_TW' if lang == 'zh' else 'en_US' }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | url }}">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
+
+  {%- if not site.indexing %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ company.nameEn }}",
+    "alternateName": ["{{ company.nameZh }}", "AMPINTEC PLUS"],
+    "url": "{{ site.siteUrl }}/",
+    "logo": "{{ site.siteUrl }}/assets/img/ampintec-logo.png",
+    "email": "{{ company.email }}",
+    "telephone": "+886-975-067-383",
+    "taxID": "{{ company.taxId }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12F., No. 130, Sec. 4, Chongyang Rd.",
+      "addressLocality": "Sanchong Dist.",
+      "addressRegion": "New Taipei City",
+      "addressCountry": "TW"
+    }
+  }
+  </script>
+</head>
+<body>
+  {% include "header.njk" %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var langSwitch = document.getElementById('js-lang-switch');
+      if (langSwitch) {
+        langSwitch.addEventListener('click', function () {
+          try { localStorage.setItem('ampintec_lang', '{{ altLang }}'); } catch (e) {}
+        });
+      }
+    });
+  </script>
+</body>
+</html>

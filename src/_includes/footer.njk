@@ -1,0 +1,15 @@
+<footer class="footer">
+  <div class="container">
+    <p class="footer-slogan">{{ i18n[lang].footer.slogan }}</p>
+
+    <p class="footer-legal">{%- if lang == 'zh' -%}
+© {{ company.copyrightYear }} {{ company.nameZh }} {{ company.nameEn }}｜統一編號 {{ company.taxId }}｜{{ company.addressZh }}｜<a href="mailto:{{ company.email }}">{{ company.email }}</a>
+      {%- else -%}
+© {{ company.copyrightYear }} {{ company.nameZh }} {{ company.nameEn }}｜Tax ID {{ company.taxId }}｜{{ company.addressEn }}｜<a href="mailto:{{ company.email }}">{{ company.email }}</a>
+      {%- endif -%}</p>
+
+    <p class="footer-nav"><a href="{{ ('/' ~ lang ~ '/privacy/') | url }}">{{ footerNav[lang].privacy }}</a>｜<a href="{{ ('/' ~ lang ~ '/terms/') | url }}">{{ footerNav[lang].terms }}</a>｜<a href="{{ ('/' ~ lang ~ '/cookies/') | url }}">{{ footerNav[lang].cookies }}</a>｜<button type="button" class="footer-link-btn" id="js-cookie-settings">{{ footerNav[lang].cookieSettings }}</button></p>
+
+    <p class="footer-certs">{{ company.certifications | join('｜') }}</p>
+  </div>
+</footer>
