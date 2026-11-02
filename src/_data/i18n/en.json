@@ -299,5 +299,20 @@
     "services_cta": "View All Services",
     "cert_eyebrow": "Quality Assurance",
     "cta_title": "Ready to Start Your Project?"
+  },
+  "servicesPage": {
+    "overview_desc": "From design and prototyping to production post-processing, AMPINTEC PLUS offers one-stop metal 3D printing manufacturing services.",
+    "obsolete": {
+      "title": "Obsolete Spare Parts",
+      "intro": "Is a part on your equipment or production line discontinued, with no OEM replacement available? AMPINTEC PLUS uses metal 3D printing and reverse engineering to remanufacture discontinued or hard-to-find parts without tooling — single units or small batches — dramatically shortening your repair downtime.",
+      "b1_title": "Tooling-Free",
+      "b1_desc": "No metal tooling required — production starts from a single unit.",
+      "b2_title": "Reverse Engineering",
+      "b2_desc": "Rebuild from an existing part or drawing to restore dimensions and function.",
+      "b3_title": "Flexible Volumes",
+      "b3_desc": "From a single piece to small batches, with no minimum order quantity.",
+      "b4_title": "Fast Delivery",
+      "b4_desc": "Lead times starting from 7 days, greatly reducing equipment downtime."
+    }
   }
 }

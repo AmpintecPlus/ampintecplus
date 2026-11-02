@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: LPBF／SLM 金屬3D列印代工服務
+description: AMPINTEC PLUS 提供 LPBF／SLM／MBJ 金屬3D列印代工，直接熔融金屬粉末成型，適合高強度、輕量化、複雜內部流道的航太與半導體零件，成型尺寸最大 300×300×300mm。
+---
+{% set i = i18n.zh %}
+
+<section class="section section-dark" id="lpbf-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.service_lpbf_title }}</span>
+      <h1 class="section-title">{{ i.technology.cat4_title }}</h1>
+      <p class="section-subtitle">{{ i.technology.cat4_desc }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- 成型尺寸規格表 -->
+<section class="section section-light" id="equipment">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.equipment }}</span>
+      <h2 class="section-title">{{ i.equipment.title }}</h2>
+    </div>
+    <div class="equipment-layout">
+      <div class="equipment-table-wrap">
+        <h3>{{ i.equipment.table_title }}</h3>
+        <table class="eq-table">
+          <thead>
+            <tr>
+              <th>{{ i.equipment.col_type }}</th>
+              <th>{{ i.equipment.col_size }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ i.equipment.type_metal }}</td>
+              <td>{{ i.equipment.size_metal }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.equipment.type_nylon }}</td>
+              <td>{{ i.equipment.size_nylon }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.equipment.type_photo }}</td>
+              <td>{{ i.equipment.size_photo }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="lpbf-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/zh/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>

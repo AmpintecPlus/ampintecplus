@@ -1,0 +1,55 @@
+---
+layout: base.njk
+title: 停產備品重製｜免開模金屬3D列印
+description: 設備零件已停產找不到原廠備品？AMPINTEC PLUS 透過金屬3D列印與逆向工程，免開模重製停產或難尋零件，單件、少量皆可承接，交期最快7天起。
+---
+{% set i = i18n.zh %}
+
+<!-- DRAFT: 待黃總審核,見 COPY_REVIEW.md -->
+<section class="section section-dark" id="obsolete-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.service_obsolete_title }}</span>
+      <h1 class="section-title">{{ i.servicesPage.obsolete.title }}</h1>
+      <p class="section-subtitle">{{ i.servicesPage.obsolete.intro }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" id="obsolete-benefits">
+  <div class="container">
+    <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-icon">🛠️</div>
+        <h4>{{ i.servicesPage.obsolete.b1_title }}</h4>
+        <p>{{ i.servicesPage.obsolete.b1_desc }}</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🔁</div>
+        <h4>{{ i.servicesPage.obsolete.b2_title }}</h4>
+        <p>{{ i.servicesPage.obsolete.b2_desc }}</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">📦</div>
+        <h4>{{ i.servicesPage.obsolete.b3_title }}</h4>
+        <p>{{ i.servicesPage.obsolete.b3_desc }}</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">⏱️</div>
+        <h4>{{ i.servicesPage.obsolete.b4_title }}</h4>
+        <p>{{ i.servicesPage.obsolete.b4_desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="obsolete-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/zh/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
