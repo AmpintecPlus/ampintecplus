@@ -1,0 +1,14 @@
+{
+  "name": "ampintecplus-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AMPINTEC PLUS official website (static multi-page, Eleventy)",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "build:test": "eleventy --pathprefix=/ampintecplus/"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

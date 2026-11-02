@@ -1,0 +1,8 @@
+{
+  "siteUrl": "https://www.ampintecplus.com",
+  "indexing": false,
+  "gaId": "[GA4 ID]",
+  "consentKey": "[例如 ampintec_consent]",
+  "consentMaxAgeDays": 365,
+  "formEndpoint": "https://script.google.com/macros/s/AKfycbx4UJfNMm4Ozca_46U7zr4VO4hJ6HAFedDsrwak4XoYKUxG_SXzLn5nybVuizx1of0a/exec"
+}

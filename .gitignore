@@ -6,6 +6,8 @@ AMPINTEC-PLUS_網站規劃.md
 task.md
 UNDERSTANDING_交接理解摘要.md
 docs/repo-setup.md
+node_modules/
+_site/
 *.pdf
 .DS_Store
 _source/
