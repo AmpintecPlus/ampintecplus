@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: 金屬3D列印材料選擇｜鋁合金／鈦合金／不鏽鋼
+description: AMPINTEC PLUS 金屬3D列印代工支援鋁合金、鈦合金、不鏽鋼、鎳合金、銅合金及客製合金等材料，提供3D列印與傳統金屬機械性質對照表，歡迎透過表單索取詳細數據。
+---
+{% set i = i18n.zh %}
+
+<section class="section section-dark" id="materials">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.materials }}</span>
+      <h1 class="section-title">{{ i.materials.title }}</h1>
+    </div>
+
+    <div class="materials-grid">
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m1 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m2 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m3 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m4 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m5 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m6 | safe }}</span>
+      </div>
+    </div>
+
+    <div class="materials-lead">
+      <span>{{ i.materials.lead_magnet }}</span>
+      <a href="{{ ('/zh/contact/') | url }}">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
