@@ -314,5 +314,19 @@
       "b4_title": "Fast Delivery",
       "b4_desc": "Lead times starting from 7 days, greatly reducing equipment downtime."
     }
+  },
+  "industriesPage": {
+    "title": "Industries",
+    "intro": "Metal 3D printing fits precision part manufacturing and prototyping needs across many industries. Key application areas are outlined below.",
+    "aerospace_title": "Aerospace",
+    "aerospace_desc": "Metal 3D printing enables aerospace components with complex internal channels and lightweight structures, paired with machining and polishing for precision dimensions and surface finish — suitable for prototype validation, small-batch parts, and maintenance spares.",
+    "semiconductor_title": "Semiconductor",
+    "semiconductor_desc": "Semiconductor production lines often require custom fixtures, transport components, and precision structural parts. Metal 3D printing enables rapid prototyping and small-batch production directly from design files, shortening the wait for equipment adjustments and replacement parts.",
+    "mold_title": "Mold & Tooling",
+    "mold_desc": "Metal 3D printing can produce tooling components and jigs with complex internal channels or lightweight structures, used for production-line support and prototype validation, helping shorten development and testing time.",
+    "industrial_title": "Industrial Equipment",
+    "industrial_desc": "Structural parts, brackets, and functional components on industrial equipment lines can be rapidly remanufactured or customized via metal 3D printing based on existing designs, supporting equipment maintenance and line upgrades.",
+    "medical_title": "Medical (Non-Invasive Applications)",
+    "medical_desc": "Metal 3D printing can be applied to non-invasive external structural components and surgical assistance tools for medical devices, such as instrument housings and non-implantable assistive jigs, produced in small batches to custom specifications."
   }
 }
