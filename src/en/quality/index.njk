@@ -1,0 +1,100 @@
+---
+layout: base.njk
+title: Quality Assurance & Inspection | AS9100D, ISO 9001
+description: AMPINTEC PLUS holds AS9100D and ISO 9001, with full inspection capabilities including metallographic analysis, tensile strength testing, and 3D scanning/CMM, achieving tolerances rivaling precision casting and thin walls down to 0.5mm.
+---
+{% set i = i18n.en %}
+
+<section class="section section-light" id="quality">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.quality }}</span>
+      <h1 class="section-title">{{ i.quality.title }}</h1>
+    </div>
+
+    <!-- Certification badges: name only, no scope/number/issuer/expiry -->
+    <div class="quality-badges">
+      <div class="quality-badge">
+        <div class="badge-name">{{ i.quality.b1_name }}</div>
+      </div>
+      <div class="quality-badge">
+        <div class="badge-name">{{ i.quality.b2_name }}</div>
+      </div>
+    </div>
+
+    <!-- Tolerance comparison -->
+    <div class="compare-container">
+      <div class="compare-info">
+        <h3>{{ i.quality.precision_title }}</h3>
+        <p>{{ i.quality.precision_desc1 }}</p>
+        <img src="{{ '/assets/img/quality-scan.webp' | url }}" alt="Metrology and dimensional inspection scan illustration" width="1024" height="1024" loading="lazy" decoding="async" style="width: 100%; border-radius: 4px; border: 1px solid rgba(26,26,26,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+      </div>
+      <div class="compare-cards">
+        <div class="compare-card">
+          <div class="compare-card-title">{{ i.quality.compare1_title }}</div>
+          <div class="compare-values">
+            <div class="comp-val val-before">
+              <span class="val-num">{{ i.quality.p_before1 }}</span>
+              <span class="val-lbl">Traditional</span>
+            </div>
+            <div class="comp-val val-after">
+              <span class="val-num">{{ i.quality.p_after1 }}</span>
+              <span class="val-lbl">AMPINTEC PLUS</span>
+            </div>
+          </div>
+          <div class="compare-card-note">{{ i.quality.precision_note }}</div>
+        </div>
+        <div class="compare-card">
+          <div class="compare-card-title">{{ i.quality.compare2_title }}</div>
+          <div class="compare-values compare-values-single">
+            <div class="comp-val val-after">
+              <span class="val-num">{{ i.quality.p_after2 }}</span>
+              <span class="val-lbl">AMPINTEC PLUS</span>
+            </div>
+          </div>
+          <div class="compare-card-note">{{ i.quality.precision_note }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inspection capability grid -->
+    <h3 style="text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 30px;">{{ i.quality.detect_title }}</h3>
+    <div class="detector-grid">
+      <div class="detector-card">
+        <span class="detector-icon">⚡</span>
+        <span class="detector-name">{{ i.quality.d1 }}</span>
+      </div>
+      <div class="detector-card">
+        <span class="detector-icon">⚡</span>
+        <span class="detector-name">{{ i.quality.d2 }}</span>
+      </div>
+      <div class="detector-card">
+        <span class="detector-icon">⚡</span>
+        <span class="detector-name">{{ i.quality.d3 }}</span>
+      </div>
+      <div class="detector-card">
+        <span class="detector-icon">⚡</span>
+        <span class="detector-name">{{ i.quality.d4 }}</span>
+      </div>
+      <div class="detector-card">
+        <span class="detector-icon">⚡</span>
+        <span class="detector-name">{{ i.quality.d5 }}</span>
+      </div>
+      <div class="detector-card">
+        <span class="detector-icon">⚡</span>
+        <span class="detector-name">{{ i.quality.d6 }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="quality-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/en/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
