@@ -1,0 +1,109 @@
+---
+layout: base.njk
+title: About Us | Our Story & Founding Team
+description: AMPINTEC PLUS began additive manufacturing in 2015 and officially launched the brand in 2025, integrating metal 3D printing with precision machining to deliver a Made-in-Taiwan one-stop solution. Learn about our milestones and founding team.
+---
+{% set i = i18n.en %}
+
+<section class="section section-light" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.about }}</span>
+      <h1 class="section-title">{{ i.about.title }}</h1>
+    </div>
+
+    <div class="about-layout">
+      <!-- Milestones -->
+      <div class="about-left">
+        <h3>{{ i.about.timeline_title }}</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">{{ i.about.t1_year }}</div>
+            <p class="timeline-desc">{{ i.about.t1_desc }}</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">{{ i.about.t2_year }}</div>
+            <p class="timeline-desc">{{ i.about.t2_desc }}</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">{{ i.about.t3_year }}</div>
+            <p class="timeline-desc">{{ i.about.t3_desc }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leadership -->
+      <div class="about-right">
+        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 30px; position: relative; padding-bottom: 10px; border-bottom: 2px solid rgba(26,26,26,0.1); width: fit-content;">{{ i.about.team_title }}</h3>
+        <div class="founders-grid">
+          <div class="founder-card">
+            <div class="founder-header">
+              <div class="founder-name">{{ i.about.f1_name }}</div>
+              <div class="founder-title">{{ i.about.f1_title }}</div>
+            </div>
+            <p class="founder-desc">{{ i.about.f1_desc }}</p>
+          </div>
+          <div class="founder-card">
+            <div class="founder-header">
+              <div class="founder-name">{{ i.about.f2_name }}</div>
+              <div class="founder-title">{{ i.about.f2_title }}</div>
+            </div>
+            <p class="founder-desc">{{ i.about.f2_desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Made in Taiwan -->
+    <div class="mit-wrap">
+      <h3>{{ i.advantages.mit_title }}</h3>
+      <div class="mit-table-wrap">
+        <table class="mit-table">
+          <thead>
+            <tr>
+              <th>{{ i.advantages.col_aspect }}</th>
+              <th>{{ i.advantages.col_oversea }}</th>
+              <th>{{ i.advantages.col_mit }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ i.advantages.mit_log }}</td>
+              <td>{{ i.advantages.mit_log_o }}</td>
+              <td>{{ i.advantages.mit_log_m }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.advantages.mit_comm }}</td>
+              <td>{{ i.advantages.mit_comm_o }}</td>
+              <td>{{ i.advantages.mit_comm_m }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.advantages.mit_lead }}</td>
+              <td>{{ i.advantages.mit_lead_o }}</td>
+              <td>{{ i.advantages.mit_lead_m }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.advantages.mit_ip }}</td>
+              <td>{{ i.advantages.mit_ip_o }}</td>
+              <td>{{ i.advantages.mit_ip_m }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="about-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/en/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
