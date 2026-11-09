@@ -57,6 +57,86 @@ description: AMPINTEC PLUS began additive manufacturing in 2015 and officially l
       </div>
     </div>
 
+    <!-- Quantified comparison: Traditional / Generic AM / AMPINTEC PLUS -->
+    <div class="section-header" style="margin-top: 60px; margin-bottom: 8px;">
+      <span class="eyebrow">{{ i.nav.advantages }}</span>
+      <h2 class="section-title">{{ i.advantages.title }}</h2>
+      <p class="section-subtitle" style="font-size: 1.05rem; color: var(--color-gray-text); margin-top: 10px; margin-bottom: 0;">{{ i.advantages.chart_title }}</p>
+    </div>
+
+    <div class="vs-chart-wrap" id="js-advantages-chart-trigger">
+      <p style="text-align: center; margin-bottom: 25px; color: var(--color-gray-text); font-size: 0.9rem; margin-top: 30px;">
+        * <span>{{ i.advantages.chart_legend }}</span>
+      </p>
+
+      <div class="chart-legend" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 16px; height: 16px; background-color: var(--color-gray-text); border-radius: 3px;"></span>
+          <span style="font-size: 0.9rem; font-weight: 600;">{{ i.advantages.legend_traditional }}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 16px; height: 16px; background-color: #6B7A8F; border-radius: 3px;"></span>
+          <span style="font-size: 0.9rem; font-weight: 600;">{{ i.advantages.legend_generic_am }}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 16px; height: 16px; background-color: var(--color-gold); border-radius: 3px; box-shadow: 0 0 5px rgba(201, 162, 39, 0.5);"></span>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-gold);">{{ i.advantages.legend_ampintec }}</span>
+        </div>
+      </div>
+
+      <div class="advantages-chart">
+        {%- for row in advantagesChart.metrics %}
+        <div class="chart-row{{ ' highlight-row' if row.noteKey }}">
+          {%- if row.noteKey %}
+          <div class="chart-label" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
+            <span style="font-weight: 800;">{{ i.advantages[row.labelKey] }}</span>
+            <small style="font-size: 0.75rem; color: var(--color-gold); font-weight: 500;">{{ i.advantages[row.noteKey] }}</small>
+          </div>
+          {%- else %}
+          <div class="chart-label"><span>{{ i.advantages[row.labelKey] }}</span></div>
+          {%- endif %}
+          <div class="chart-bars">
+            <div class="chart-bar-container">
+              <span class="bar-name">{{ i.advantages.bar_traditional }}</span>
+              <div class="bar-track"><div class="bar-fill bar-traditional" data-score="{{ row.scores.traditional }}" style="width: 0%;"></div></div>
+              <span class="bar-val">{{ row.scores.traditional }}</span>
+            </div>
+            <div class="chart-bar-container">
+              <span class="bar-name">{{ i.advantages.bar_generic_am }}</span>
+              <div class="bar-track"><div class="bar-fill bar-generic-am" data-score="{{ row.scores.genericAm }}" style="width: 0%;"></div></div>
+              <span class="bar-val">{{ row.scores.genericAm }}</span>
+            </div>
+            <div class="chart-bar-container">
+              <span class="bar-name">{{ i.advantages.bar_ampintec }}</span>
+              <div class="bar-track"><div class="bar-fill bar-ampintec" data-score="{{ row.scores.ampintec }}" style="width: 0%;"></div></div>
+              <span class="bar-val">{{ row.scores.ampintec }}</span>
+            </div>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <!-- R&D cycle reduction case -->
+    <div class="cycle-case-wrap" id="js-cycle-trigger">
+      <h3>{{ i.advantages.cycle_title }}</h3>
+      <p style="text-align: center; margin-bottom: 25px;">{{ i.advantages.cycle_desc }}</p>
+      <div class="cycle-bars">
+        <div class="cycle-bar-item">
+          <span class="cycle-bar-lbl">{{ i.advantages.cycle_trad }}</span>
+          <div class="cycle-bar-outer">
+            <div class="cycle-bar-inner bar-trad"></div>
+          </div>
+        </div>
+        <div class="cycle-bar-item">
+          <span class="cycle-bar-lbl">{{ i.advantages.cycle_am }}</span>
+          <div class="cycle-bar-outer">
+            <div class="cycle-bar-inner bar-am" id="js-cycle-am-bar" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Why Made in Taiwan -->
     <div class="mit-wrap">
       <h3>{{ i.advantages.mit_title }}</h3>

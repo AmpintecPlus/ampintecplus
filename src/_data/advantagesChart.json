@@ -1,0 +1,76 @@
+{
+  "metrics": [
+    {
+      "labelKey": "label_fixture",
+      "noteKey": null,
+      "scores": {
+        "traditional": 9,
+        "genericAm": 2,
+        "ampintec": 2
+      }
+    },
+    {
+      "labelKey": "label_lead",
+      "noteKey": null,
+      "scores": {
+        "traditional": 8,
+        "genericAm": 3,
+        "ampintec": 2
+      }
+    },
+    {
+      "labelKey": "label_labor",
+      "noteKey": null,
+      "scores": {
+        "traditional": 9,
+        "genericAm": 5,
+        "ampintec": 4
+      }
+    },
+    {
+      "labelKey": "label_moq",
+      "noteKey": null,
+      "scores": {
+        "traditional": 9,
+        "genericAm": 2,
+        "ampintec": 1
+      }
+    },
+    {
+      "labelKey": "label_inv",
+      "noteKey": null,
+      "scores": {
+        "traditional": 8,
+        "genericAm": 3,
+        "ampintec": 2
+      }
+    },
+    {
+      "labelKey": "label_env",
+      "noteKey": null,
+      "scores": {
+        "traditional": 3,
+        "genericAm": 7,
+        "ampintec": 9
+      }
+    },
+    {
+      "labelKey": "label_cost",
+      "noteKey": null,
+      "scores": {
+        "traditional": 3,
+        "genericAm": 6,
+        "ampintec": 9
+      }
+    },
+    {
+      "labelKey": "label_integration",
+      "noteKey": "integration_note",
+      "scores": {
+        "traditional": 6,
+        "genericAm": 4,
+        "ampintec": 10
+      }
+    }
+  ]
+}
