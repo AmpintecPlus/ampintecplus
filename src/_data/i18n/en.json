@@ -276,10 +276,17 @@
     "placeholder_phone": "Enter your phone number",
     "label_desc": "Project Description *",
     "placeholder_desc": "Briefly describe your project requirements, preferred materials, dimensions, etc...",
-    "label_consent": "I agree that AMPINTEC PLUS may contact me based on the info provided",
+    "sensitive_hint": "Please do not enter sensitive personal data (e.g., ID numbers, health information) or confidential technical data in this form. Drawings can be shared after an NDA is signed.",
+    "consent_before": "I have read and understood the",
+    "consent_link": "Privacy Policy",
+    "consent_after": "and acknowledge that AmpintecPlus Co., Ltd. will collect, process and use the personal data I provide as described in it to reply to my inquiry and for business communication.",
     "btn_submit": "Submit Inquiry",
+    "btn_sending": "Sending...",
     "toast_success": "Thank you for your inquiry — we'll be in touch shortly!",
-    "toast_error": "Please fill in all required fields and check the consent box."
+    "toast_error": "Please fill in all required fields and check the consent box.",
+    "email_error": "Please enter a valid email address.",
+    "phone_error": "Please enter a valid phone number (digits, +, -, or spaces only).",
+    "submit_error": "Submission failed. Please try again later or email us directly:"
   },
   "footer": {
     "slogan": "Precision Manufacturing × Inventory Optimization × Customized Solutions × ESG Green Manufacturing",

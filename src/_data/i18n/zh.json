@@ -276,10 +276,17 @@
     "placeholder_phone": "請輸入您的電話號碼",
     "label_desc": "產品需求敘述 *",
     "placeholder_desc": "請簡述您的專案需求、列印材料偏好或尺寸等資訊...",
-    "label_consent": "我同意 AMPINTEC PLUS 依本表單內容與我聯繫",
+    "sensitive_hint": "請勿在表單中填寫身分證字號、健康資料等敏感個人資料，或機密技術資料；圖檔請於簽署 NDA 後再提供。",
+    "consent_before": "我已閱讀並瞭解",
+    "consent_link": "隱私權聲明",
+    "consent_after": "，知悉安品特科技有限公司將依該聲明蒐集、處理及利用我所提供的個人資料，以回覆我的詢問及進行業務聯繫。",
     "btn_submit": "送出諮詢需求",
+    "btn_sending": "傳送中...",
     "toast_success": "感謝您的諮詢，我們將盡快與您聯繫！",
-    "toast_error": "請填寫所有必填欄位並勾選同意條款。"
+    "toast_error": "請填寫所有必填欄位並勾選同意條款。",
+    "email_error": "請輸入有效的 Email 地址。",
+    "phone_error": "請輸入有效的電話號碼（僅限數字、+、- 或空格）。",
+    "submit_error": "傳送失敗，請稍後再試或直接來信詢問："
   },
   "footer": {
     "slogan": "精密製造 × 庫存最佳化 × 客製化解決方案 × ESG 綠色製造",

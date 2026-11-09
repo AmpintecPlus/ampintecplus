@@ -2268,3 +2268,24 @@ a.case-card-link:hover .case-card-ref {
     grid-template-columns: 1fr;
   }
 }
+
+/* --- T16: Honeypot 欄位（視覺隱藏，機器人防護用）與表單提示文字 --- */
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--color-gray-text);
+  margin-top: 8px;
+}
+
+.toast-text a {
+  color: inherit;
+  text-decoration: underline;
+}
