@@ -1,0 +1,53 @@
+---
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found ｜ 找不到頁面 | AMPINTEC PLUS</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+  <style>
+    .error-404-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-dark-bg);
+      color: var(--color-white);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .error-404-wrap h1 {
+      font-size: 3rem;
+      color: var(--color-gold);
+      margin-bottom: 16px;
+    }
+    .error-404-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-404-wrap">
+    <div>
+      <h1>404</h1>
+      <p>找不到您要瀏覽的頁面，該頁面可能已經移除或網址有誤。</p>
+      <p>The page you are looking for could not be found. It may have been moved or the link may be incorrect.</p>
+      <div class="error-404-links">
+        <a class="btn btn-primary" href="{{ '/zh/' | url }}">回首頁（中文）</a>
+        <a class="btn btn-secondary" href="{{ '/en/' | url }}">Back to Homepage (English)</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
