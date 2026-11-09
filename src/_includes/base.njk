@@ -32,6 +32,11 @@
   <meta name="robots" content="noindex, nofollow">
   {%- endif %}
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- if heroImage %}
+  <link rel="preload" as="image" href="{{ heroImage | url }}" fetchpriority="high">
+  {%- endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 
   <noscript>

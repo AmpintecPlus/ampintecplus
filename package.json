@@ -5,11 +5,14 @@
   "description": "AMPINTEC PLUS official website (static multi-page, Eleventy)",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy",
-    "build:test": "eleventy --pathprefix=/ampintecplus/",
+    "build": "eleventy && node scripts/minify-assets.js",
+    "build:test": "eleventy --pathprefix=/ampintecplus/ && node scripts/minify-assets.js",
     "check": "npm run build && node scripts/check.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.51.2"
   }
 }
