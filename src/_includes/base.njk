@@ -74,7 +74,22 @@
 
   {% include "footer.njk" %}
 
+  <!-- Cookie 同意橫幅：預設隱藏，consent.js 依 localStorage 狀態決定是否顯示 -->
+  <div class="cookie-banner" id="js-cookie-banner" hidden
+    data-consent-key="{{ site.consentKey }}"
+    data-consent-max-age-days="{{ site.consentMaxAgeDays }}"
+    data-ga-id="{{ site.gaId }}">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text">{{ i18n[lang].cookieBanner.text_before }}<a href="{{ ('/' ~ lang ~ '/privacy/') | url }}" target="_blank" rel="noopener noreferrer">{{ i18n[lang].cookieBanner.link_privacy }}</a>{{ i18n[lang].cookieBanner.text_between }}<a href="{{ ('/' ~ lang ~ '/cookies/') | url }}" target="_blank" rel="noopener noreferrer">{{ i18n[lang].cookieBanner.link_cookies }}</a>{{ i18n[lang].cookieBanner.text_after }}</p>
+      <div class="cookie-banner-actions">
+        <button type="button" id="js-cookie-accept" class="btn btn-primary">{{ i18n[lang].cookieBanner.accept_label }}</button>
+        <button type="button" id="js-cookie-reject" class="btn btn-secondary">{{ i18n[lang].cookieBanner.reject_label }}</button>
+      </div>
+    </div>
+  </div>
+
   <script src="{{ '/assets/js/main.js' | url }}"></script>
+  <script src="{{ '/assets/js/consent.js' | url }}"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var langSwitch = document.getElementById('js-lang-switch');

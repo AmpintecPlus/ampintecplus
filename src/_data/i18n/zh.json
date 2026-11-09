@@ -337,5 +337,14 @@
     "medical_desc": "金屬3D列印可應用於非侵入式的醫療器材外部結構件與手術輔助器具，例如器械外殼、非植入式輔助治具，依客製化需求少量生產。",
     "trends_title": "產業參考案例",
     "trends_disclaimer": "以下為公開產業資料，非本公司製造，本公司與所列公司無合作或供應關係。"
+  },
+  "cookieBanner": {
+    "text_before": "我們使用必要的技術維持網站運作，並在您的瀏覽器中記錄您的選擇。經您同意後，我們才會使用 Google Analytics 分析 Cookie，以了解網站使用情形並改善網站。您可以隨時透過頁尾的「Cookie 設定」變更或撤回選擇。詳見",
+    "link_privacy": "隱私權聲明",
+    "text_between": "與",
+    "link_cookies": "Cookie 政策",
+    "text_after": "。",
+    "accept_label": "接受分析 Cookie",
+    "reject_label": "拒絕"
   }
 }

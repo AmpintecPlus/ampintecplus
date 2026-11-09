@@ -337,5 +337,14 @@
     "medical_desc": "Metal 3D printing can be applied to non-invasive external structural components and surgical assistance tools for medical devices, such as instrument housings and non-implantable assistive jigs, produced in small batches to custom specifications.",
     "trends_title": "Industry Reference Cases",
     "trends_disclaimer": "Public industry information for technology context only. Not manufactured by AMPINTEC PLUS; no affiliation or supply relationship is implied."
+  },
+  "cookieBanner": {
+    "text_before": "We use strictly necessary technologies to make this website work and to remember your choice in your browser. Only with your consent do we use Google Analytics cookies to understand how the website is used and improve it. You can change or withdraw your choice at any time via \"Cookie settings\" in the footer. See our ",
+    "link_privacy": "Privacy Policy",
+    "text_between": " and ",
+    "link_cookies": "Cookie Policy",
+    "text_after": ".",
+    "accept_label": "Accept analytics cookies",
+    "reject_label": "Reject"
   }
 }

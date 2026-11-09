@@ -2350,3 +2350,65 @@ mark.placeholder {
   border-radius: 3px;
   font-weight: 600;
 }
+
+/* --- T19: Cookie 同意橫幅 --- */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: var(--color-dark-bg);
+  color: var(--color-white);
+  border-top: 1px solid rgba(201, 162, 39, 0.3);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.cookie-banner[hidden] {
+  display: none !important;
+}
+
+.cookie-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.cookie-banner-text {
+  flex: 1 1 480px;
+  font-size: 0.9rem;
+  color: var(--color-light-gray-text);
+  margin: 0;
+}
+
+.cookie-banner-text a {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cookie-banner-actions .btn {
+  width: auto;
+  min-width: 160px;
+  padding: 12px 24px;
+}
+
+@media (max-width: 600px) {
+  .cookie-banner-actions {
+    width: 100%;
+  }
+  .cookie-banner-actions .btn {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
