@@ -2,17 +2,6 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
-{%- if site.indexing %}
 User-agent: *
 Allow: /
 Sitemap: {{ site.siteUrl }}/sitemap.xml
-{%- else %}
-# 測試期間：封鎖所有爬蟲，避免測試網址被索引。
-# 正式上線、黃總核准後，請將 src/_data/site.json 的 "indexing" 改為 true 並重新 build，
-# 本檔會自動改成：
-#   User-agent: *
-#   Allow: /
-#   Sitemap: {{ site.siteUrl }}/sitemap.xml
-User-agent: *
-Disallow: /
-{%- endif %}
