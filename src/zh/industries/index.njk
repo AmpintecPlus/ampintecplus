@@ -44,8 +44,27 @@ description: AMPINTEC PLUS 金屬3D列印應用於航太、半導體、模具與
   </div>
 </section>
 
+<!-- DRAFT: 產業參考案例開頭標註與區塊，待黃總/法務審閱，見 COPY_REVIEW.md -->
+<section class="section section-light" id="industry-trends">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ i.industriesPage.trends_title }}</h2>
+      <p class="section-subtitle">※ {{ i.industriesPage.trends_disclaimer }}</p>
+    </div>
+    <div class="tech-categories">
+      {%- for item in industryTrends.items %}
+      <div class="category-card">
+        <h4>{{ i.cases[item.key ~ '_title'] }}</h4>
+        <p>{{ i.cases[item.key ~ '_desc'] }}</p>
+        <p><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ i.cases.ref_label }}</a></p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
-<section class="section section-light" id="industries-cta">
+<section class="section section-dark" id="industries-cta">
   <div class="container home-cta-wrap">
     <h2 class="section-title">{{ i.home.cta_title }}</h2>
     <p>{{ i.contact.info_desc }}</p>

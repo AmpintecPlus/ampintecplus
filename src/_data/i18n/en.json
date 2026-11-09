@@ -327,6 +327,8 @@
     "industrial_title": "Industrial Equipment",
     "industrial_desc": "Structural parts, brackets, and functional components on industrial equipment lines can be rapidly remanufactured or customized via metal 3D printing based on existing designs, supporting equipment maintenance and line upgrades.",
     "medical_title": "Medical (Non-Invasive Applications)",
-    "medical_desc": "Metal 3D printing can be applied to non-invasive external structural components and surgical assistance tools for medical devices, such as instrument housings and non-implantable assistive jigs, produced in small batches to custom specifications."
+    "medical_desc": "Metal 3D printing can be applied to non-invasive external structural components and surgical assistance tools for medical devices, such as instrument housings and non-implantable assistive jigs, produced in small batches to custom specifications.",
+    "trends_title": "Industry Reference Cases",
+    "trends_disclaimer": "Public industry information for technology context only. Not manufactured by AMPINTEC PLUS; no affiliation or supply relationship is implied."
   }
 }
