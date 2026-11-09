@@ -2289,3 +2289,64 @@ a.case-card-link:hover .case-card-ref {
   color: inherit;
   text-decoration: underline;
 }
+
+/* --- T18: 法律頁（隱私權/使用條款/Cookie政策）樣式 --- */
+.legal-content {
+  max-width: 860px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.legal-content h2 {
+  margin-top: 48px;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.legal-content h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.legal-content p,
+.legal-content li {
+  color: var(--color-gray-text);
+  margin-bottom: 12px;
+}
+
+.legal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.legal-content th,
+.legal-content td {
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-content th {
+  background-color: var(--color-light-bg);
+  font-weight: 700;
+}
+
+.legal-effective-date {
+  color: var(--color-gray-text);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+mark.placeholder {
+  background-color: rgba(201, 162, 39, 0.25);
+  color: var(--color-charcoal);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
