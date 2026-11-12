@@ -75,6 +75,7 @@ function checkInternalFilesNotTracked() {
     /^CLAUDE\.md$/,
     /^SPEC_網站規格\.md$/,
     /^TASKS_修改任務清單\.md$/,
+    /^AEO_.*\.md$/,
     /^COPY_REVIEW\.md$/,
     /^UNDERSTANDING_交接理解摘要\.md$/,
     /^AMPINTEC-PLUS_網站規劃\.md$/,
