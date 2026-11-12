@@ -1104,66 +1104,6 @@ html[lang="en"] .hero-title {
   background-color: rgba(201, 162, 39, 0.02);
 }
 
-/* 研發週期縮短案例 */
-.cycle-case-wrap {
-  background: var(--color-charcoal);
-  color: var(--color-white);
-  padding: 40px;
-  border-radius: 4px;
-  margin-bottom: 60px;
-  border: 1px solid var(--color-border-dark);
-}
-
-.cycle-case-wrap h3 {
-  font-size: 1.5rem;
-  color: var(--color-white);
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.cycle-bars {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cycle-bar-item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.cycle-bar-lbl {
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.cycle-bar-outer {
-  width: 100%;
-  height: 25px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-.cycle-bar-inner {
-  height: 100%;
-  border-radius: 50px;
-  transition: width 1.5s cubic-bezier(0.1, 0.8, 0.1, 1);
-}
-
-.cycle-bar-inner.bar-trad {
-  width: 100%;
-  background: var(--color-gray-text);
-}
-
-.cycle-bar-inner.bar-am {
-  width: 15.3%;
-  /* 2週 vs 3個月 (約13週) -> 2/13 = 15.3% */
-  background: var(--color-gold);
-  box-shadow: 0 0 10px rgba(var(--color-gold-rgb), 0.5);
-}
-
 /* 為什麼選擇台灣製造 */
 .mit-wrap h3 {
   font-size: 1.6rem;
@@ -2411,4 +2351,40 @@ mark.placeholder {
     flex: 1 1 auto;
     min-width: 0;
   }
+}
+
+/* AEO T29：麵包屑導覽（可見 + 供爬蟲讀取的靜態 HTML） */
+.breadcrumb {
+  padding: 16px 0 0;
+  font-size: 0.85rem;
+}
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 6px;
+  color: var(--color-gray-text);
+}
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.breadcrumb-item:not(:first-child)::before {
+  content: "/";
+  color: var(--color-gray-text);
+}
+.breadcrumb-item a {
+  color: var(--color-gray-text);
+  text-decoration: none;
+}
+.breadcrumb-item a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+.breadcrumb-item [aria-current="page"] {
+  color: var(--color-charcoal);
+  font-weight: 600;
 }

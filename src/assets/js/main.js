@@ -163,24 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // --- 4. 進度條動畫 (Intersection Observer) ---
-  // (a) 研發週期進度條
-  const cycleTrigger = document.getElementById('js-cycle-trigger');
-  const amBar = document.getElementById('js-cycle-am-bar');
-
-  if (cycleTrigger && amBar) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          amBar.style.width = '15.3%';
-          observer.unobserve(cycleTrigger);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    observer.observe(cycleTrigger);
-  }
-
-  // (b) 三方量化比較圖表進度條
+  // 三方量化比較圖表進度條
   const chartTrigger = document.getElementById('js-advantages-chart-trigger');
   const barFills = document.querySelectorAll('.advantages-chart .bar-fill');
 
