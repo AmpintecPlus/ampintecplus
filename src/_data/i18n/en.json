@@ -249,7 +249,7 @@
     "q1": "What is your Minimum Order Quantity (MOQ)?",
     "a1": "3D printing is free from tooling constraints, allowing production starting from a single unit. We evaluate pricing based on part complexity, volume, and selected materials, ideal for prototyping or low-volume custom production.",
     "q2": "What is the typical lead time?",
-    "a2": "Prototyping generally takes 14 to 30 days. For production, lead times depend on quantity, printer scheduling, and post-processing needs (e.g., CNC machining, heat treatment, polishing). A detailed schedule will be provided before placing an order.",
+    "a2": "Lead time from 7 days. For production, lead times depend on quantity, printer scheduling, and post-processing needs (e.g., CNC machining, heat treatment, polishing). A detailed schedule will be provided before placing an order.",
     "q3": "What file formats do you accept?",
     "a3": "We recommend standard 3D CAD formats like STEP (.step / .stp) or IGES (.igs). If you only have 2D drawings, we can also assist in feasibility analysis and conversion.",
     "q4": "Is my design data kept confidential?",
