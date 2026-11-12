@@ -145,6 +145,7 @@
   },
   "materials": {
     "title": "Material Selection",
+    "answer_intro": "AMPINTEC PLUS supports high-quality aluminum, titanium, stainless steel, nickel, copper, and customized alloys for metal 3D printing, suited to customers selecting the right metal powder for their part application, with one-stop precision machining and post-processing available.",
     "lead_magnet": "Mechanical property comparison between AM and conventional metals available on request — use the contact form below.",
     "m1": "Aluminum Alloy",
     "m2": "Titanium Alloy",
@@ -305,9 +306,13 @@
   },
   "servicesPage": {
     "overview_desc": "From design and prototyping to production post-processing, AMPINTEC PLUS offers one-stop metal 3D printing manufacturing services.",
+    "overview_answer": "AMPINTEC PLUS provides high-quality metal 3D printing manufacturing with one-stop service spanning design, prototyping, LPBF/SLM printing, precision machining, and post-processing — helping aerospace, semiconductor, and industrial equipment customers accelerate R&D. Lead time from 7 days. Printing, precision machining and post-processing are completed in Taiwan.",
+    "lpbf_answer": "AMPINTEC PLUS provides high-quality LPBF / SLM metal 3D printing with one-stop service, including precision machining and post-processing. It is suited to high-strength, lightweight parts, complex internal channels, and aerospace or semiconductor components, with a maximum build size of 300×300×300 mm, helping customers accelerate R&D. Lead time from 7 days (as fast as 7 days). Printing, precision machining and post-processing are completed in Taiwan. Contact sales@ampintecplus.com or use the contact form.",
+    "post_answer": "AMPINTEC PLUS provides high-quality one-stop post-processing for metal 3D printed parts, including precision machining (machining, laser, waterjet, polishing, welding, casting, and forging), suited to aerospace, semiconductor, and industrial equipment parts that need printing through delivery handled in one place — helping customers accelerate R&D. Lead time from 7 days. Printing, precision machining and post-processing are completed in Taiwan.",
     "obsolete": {
       "title": "Obsolete Spare Parts",
       "intro": "Is a part on your equipment or production line discontinued, with no OEM replacement available? AMPINTEC PLUS uses metal 3D printing and reverse engineering to remanufacture discontinued or hard-to-find parts without tooling — single units or small batches — dramatically shortening your repair downtime.",
+      "answer_next": "Lead time from 7 days. Printing, precision machining and post-processing are completed in Taiwan — contact us through the form for an evaluation.",
       "b1_title": "Tooling-Free",
       "b1_desc": "No metal tooling required — production starts from a single unit.",
       "b2_title": "Reverse Engineering",
@@ -321,6 +326,7 @@
   "industriesPage": {
     "title": "Industries",
     "intro": "Metal 3D printing fits precision part manufacturing and prototyping needs across many industries. Key application areas are outlined below.",
+    "answer_intro": "Metal 3D printing fits precision part manufacturing and prototyping needs in aerospace, semiconductor, mold and tooling, industrial equipment, and non-invasive medical device applications, with one-stop service including precision machining and post-processing to help customers accelerate R&D. Lead time from 7 days. Printing, precision machining and post-processing are completed in Taiwan.",
     "aerospace_title": "Aerospace",
     "aerospace_desc": "Metal 3D printing enables aerospace components with complex internal channels and lightweight structures, paired with machining and polishing for precision dimensions and surface finish — suitable for prototype validation, small-batch parts, and maintenance spares.",
     "semiconductor_title": "Semiconductor",
