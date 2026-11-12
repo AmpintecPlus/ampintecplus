@@ -154,6 +154,83 @@ function checkCertifications() {
 }
 
 // ──────────────────────────────────────────────
+// 10. 衝突交期數字掃描（T35：黃總 2026-11-12 交期全站定調為「交期最快 7 天起」）
+// ──────────────────────────────────────────────
+function checkConflictingLeadTime() {
+  const errors = [];
+  const llmsFile = path.join(siteDir, 'llms.txt');
+  const scanFiles = [...htmlFiles, ...(fs.existsSync(llmsFile) ? [llmsFile] : [])];
+  const conflictPatterns = [
+    { name: '「14 至 30」', re: /14\s*至\s*30/ },
+    { name: '「14 to 30 days」', re: /14\s*to\s*30\s*days/i },
+    { name: '「一般原型樣品約 14」', re: /一般原型樣品約\s*14/ },
+    { name: '「傳統製造：3個月」', re: /傳統製造[:：]\s*3\s*個月/ },
+    { name: '「AMPINTEC PLUS：2週」', re: /AMPINTEC PLUS[:：]\s*2\s*週/ },
+    { name: '「Traditional: 3 Months」', re: /Traditional:\s*3\s*Months/i },
+    { name: '「AMPINTEC PLUS: 2 Weeks」', re: /AMPINTEC PLUS:\s*2\s*Weeks/i },
+  ];
+  scanFiles.forEach((f) => {
+    const text = fs.readFileSync(f, 'utf8');
+    conflictPatterns.forEach((p) => {
+      if (p.re.test(text)) {
+        errors.push(`${path.relative(siteDir, f)}：出現與定調交期衝突的 ${p.name}`);
+      }
+    });
+  });
+  report('10. 衝突交期數字掃描（僅允許「交期最快 7 天起」/"Lead time from 7 days"）', errors.length === 0, errors);
+}
+
+// ──────────────────────────────────────────────
+// 11. 10/28 know-how 與法務禁用字樣掃描（含供應鏈敏感詞、第三方圖片殘留字樣）
+// ──────────────────────────────────────────────
+
+// 白名單：現有網站本來就有、經黃總/AEO 規格核准保留的既有文字，不算違規，
+// 也不改現有文字（AEO_優化規格.md §13：「現有鍛造文案若已出現『疲勞壽命』
+// 等字，屬既有內容，不刪不改；但不可再新增測試或數據。」）。
+const BANNED_WHITELIST = [
+  {
+    label: '疲勞壽命／fatigue life（既有鍛造工藝描述，AEO_優化規格.md §13 核准保留，不得再新增疲勞測試相關文字）',
+    patterns: [/疲勞壽命/g, /fatigue life/gi],
+  },
+];
+
+function stripWhitelisted(text) {
+  return BANNED_WHITELIST.reduce((out, w) => w.patterns.reduce((t, re) => t.replace(re, ''), out), text);
+}
+
+function checkBannedPhrases() {
+  const errors = [];
+  const llmsFile = path.join(siteDir, 'llms.txt');
+  const scanFiles = [...htmlFiles, ...(fs.existsSync(llmsFile) ? [llmsFile] : [])];
+  const bannedPatterns = [
+    { name: '一頁式網站', re: /一頁式網站/ },
+    { name: 'ANC（整字、區分大小寫）', re: /\bANC\b/ },
+    { name: '試片', re: /試片/i },
+    { name: 'test coupon', re: /test coupon/i },
+    { name: '疲勞', re: /疲勞/i },
+    { name: 'fatigue', re: /fatigue/i },
+    { name: '陽極', re: /陽極/i },
+    { name: 'anodiz', re: /anodiz/i },
+    { name: '模具周邊', re: /模具周邊/i },
+    { name: 'mold peripheral', re: /mold peripheral/i },
+    { name: '（非）紅色供應鏈', re: /非?紅色供應鏈/i },
+    { name: 'non-red', re: /non-red/i },
+    { name: '非中國', re: /非中國/i },
+    { name: 'non-China', re: /non-china/i },
+    { name: '圖片來源', re: /圖片來源/ },
+  ];
+  scanFiles.forEach((f) => {
+    const text = stripWhitelisted(fs.readFileSync(f, 'utf8'));
+    bannedPatterns.forEach((p) => {
+      if (p.re.test(text)) {
+        errors.push(`${path.relative(siteDir, f)}：出現禁用字樣「${p.name}」`);
+      }
+    });
+  });
+  report('11. 10/28 know-how／供應鏈敏感詞／圖片來源字樣掃描', errors.length === 0, errors);
+}
+
+// ──────────────────────────────────────────────
 // 5. 無價格字樣（檢查實際金額樣式，不檢查「報價」一詞本身）
 // ──────────────────────────────────────────────
 function checkNoPricing() {
@@ -297,6 +374,8 @@ checkI18nKeys();
 checkInternalLinks();
 checkNoindex();
 checkImageExif();
+checkConflictingLeadTime();
+checkBannedPhrases();
 
 console.log('='.repeat(60));
 results.forEach((r) => {
@@ -306,6 +385,11 @@ results.forEach((r) => {
   }
 });
 console.log('='.repeat(60));
+if (BANNED_WHITELIST.length) {
+  console.log('白名單（現有已核准內容，不計入第 11 項禁用字樣掃描，不改現有文字）：');
+  BANNED_WHITELIST.forEach((w) => console.log(' - ' + w.label));
+  console.log('='.repeat(60));
+}
 
 if (hasFailure) {
   console.log('❌ npm run check 失敗，請修正上面列出的項目後再推送。');
