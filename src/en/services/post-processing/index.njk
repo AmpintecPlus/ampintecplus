@@ -119,3 +119,13 @@ description: AMPINTEC PLUS offers one-stop post-processing including machining, 
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ i.home.service_post_title | safe }}",
+  "description": "{{ i.home.service_post_desc | safe }}",
+  "provider": { "@id": "{{ site.siteUrl }}/#organization" }
+}
+</script>

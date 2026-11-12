@@ -53,6 +53,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "{{ site.siteUrl }}/#organization",
     "name": "{{ company.nameEn }}",
     "alternateName": ["{{ company.nameZh }}", "AMPINTEC PLUS"],
     "url": "{{ site.siteUrl }}/",
@@ -66,14 +67,80 @@
       "addressLocality": "Sanchong Dist.",
       "addressRegion": "New Taipei City",
       "addressCountry": "TW"
+    },
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "AS9100D" },
+      { "@type": "EducationalOccupationalCredential", "name": "ISO 9001" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+886-975-067-383",
+      "email": "{{ company.email }}",
+      "contactType": "sales",
+      "availableLanguage": ["zh-TW", "en"]
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "{{ site.siteUrl }}/#website",
+    "name": "AMPINTEC PLUS",
+    "url": "{{ site.siteUrl }}/",
+    "inLanguage": ["zh-Hant-TW", "en"],
+    "publisher": { "@id": "{{ site.siteUrl }}/#organization" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "{{ site.siteUrl }}{{ page.url }}",
+    "inLanguage": "{{ 'zh-Hant-TW' if lang == 'zh' else 'en' }}",
+    "dateModified": "{{ page.date | ymd }}",
+    "isPartOf": { "@id": "{{ site.siteUrl }}/#website" }
+  }
+  </script>
+  {%- set breadcrumbTrail = page.url | breadcrumbTrail(lang, nav, footerNav, i18n) %}
+  {%- if breadcrumbTrail.length > 1 %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {%- for crumb in breadcrumbTrail %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "name": "{{ crumb.label | safe }}",
+        "item": "{{ site.siteUrl }}{{ crumb.url }}"
+      }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]
+  }
+  </script>
+  {%- endif %}
 </head>
 <body>
   {% include "header.njk" %}
 
   <main>
+    {%- if breadcrumbTrail.length > 1 %}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list container">
+        {%- for crumb in breadcrumbTrail %}
+        <li class="breadcrumb-item">
+          {%- if crumb.current -%}
+          <span aria-current="page">{{ crumb.label }}</span>
+          {%- else -%}
+          <a href="{{ crumb.url | url }}">{{ crumb.label }}</a>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    {%- endif %}
     {{ content | safe }}
   </main>
 

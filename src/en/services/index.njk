@@ -122,3 +122,13 @@ description: AMPINTEC PLUS offers end-to-end contract manufacturing from design 
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ i.home.services_title | safe }}",
+  "description": "{{ i.servicesPage.overview_desc | safe }}",
+  "provider": { "@id": "{{ site.siteUrl }}/#organization" }
+}
+</script>

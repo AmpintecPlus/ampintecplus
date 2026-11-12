@@ -53,3 +53,13 @@ description: 設備零件已停產找不到原廠備品？AMPINTEC PLUS 透過�
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ i.home.service_obsolete_title | safe }}",
+  "description": "{{ i.servicesPage.obsolete.intro | safe }}",
+  "provider": { "@id": "{{ site.siteUrl }}/#organization" }
+}
+</script>

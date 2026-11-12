@@ -119,3 +119,13 @@ description: AMPINTEC PLUS 提供機械加工、雷射、水刀、拋光（可�
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ i.home.service_post_title | safe }}",
+  "description": "{{ i.home.service_post_desc | safe }}",
+  "provider": { "@id": "{{ site.siteUrl }}/#organization" }
+}
+</script>
