@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: Cookie 政策
+description: AMPINTEC PLUS Cookie 政策，說明本網站使用之 Cookie 及類似技術、各項目之用途與保存期間，以及您可以如何變更或撤回同意。
+---
+{% set i = i18n.zh %}
+
+<section class="section section-light" id="cookies">
+  <div class="container">
+    <div class="section-header">
+      <h1 class="section-title">Cookie 政策</h1>
+    </div>
+
+    <div class="legal-content">
+      <h2>1. 什麼是 Cookie</h2>
+      <p>Cookie 是您瀏覽網站時，由網站儲存於您裝置（電腦、手機等）瀏覽器中的小型文字檔案，用以記錄您的偏好或統計網站使用情形。</p>
+
+      <h2>2. Cookie 及類似技術</h2>
+      <table>
+        <thead>
+          <tr><th>類型</th><th>名稱</th><th>提供者</th><th>用途</th><th>存續期間</th><th>是否必要</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>必要（localStorage，非 Cookie）</td>
+            <td><code>{{ site.consentKey }}</code></td>
+            <td>本公司</td>
+            <td>記錄您對分析 Cookie 的選擇（接受或拒絕）及選擇時間；不含可直接識別您的資料，也不會傳送給本公司或第三方</td>
+            <td>12 個月，屆滿後再次詢問</td>
+            <td>必要</td>
+          </tr>
+          <tr>
+            <td>必要／功能性（localStorage，非 Cookie）</td>
+            <td><code>ampintec_lang</code></td>
+            <td>本公司</td>
+            <td>記住您所選擇的網站語言；不會傳送給本公司或第三方</td>
+            <td>直到您清除瀏覽器資料</td>
+            <td>必要（無需同意）</td>
+          </tr>
+          <tr>
+            <td>分析 Cookie</td>
+            <td><code>_ga</code></td>
+            <td>Google（Google Analytics 4）</td>
+            <td>區分不同訪客，以統計網站使用情形</td>
+            <td>2 年</td>
+            <td>非必要，需經同意後才設置</td>
+          </tr>
+          <tr>
+            <td>分析 Cookie</td>
+            <td><code>_ga_<mark class="placeholder">[GA4 ID]</mark></code></td>
+            <td>Google（Google Analytics 4）</td>
+            <td>維持工作階段狀態</td>
+            <td>2 年</td>
+            <td>非必要，需經同意後才設置</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>「localStorage」是瀏覽器內建的本機儲存空間，功能與 Cookie 類似，但資料只存在您的裝置上，不會隨每次瀏覽傳送給網站伺服器。我們僅用它記錄您的同意選擇及您所選擇的網站語言，此為提供您所要求之功能所必要，因此不需事先取得同意。</p>
+      <p><mark class="placeholder">[請於網站上線後依實際設置之 Cookie 及 localStorage 項目核對並更新本表。]</mark></p>
+      <p>Google Search Console 係依 Google 搜尋提供之彙總資料，向本公司提供本網站於 Google 搜尋結果中之表現（例如曝光次數、點擊次數及搜尋字詞），不會在您的裝置上設置 Cookie。</p>
+
+      <h2>3. 您的選擇</h2>
+      <ul>
+        <li><strong>所有地區訪客</strong>：分析 Cookie 預設關閉。在您點選「接受」前，我們不會載入 Google Analytics 4，也不會設置任何分析 Cookie。</li>
+        <li><strong>保存與再次詢問</strong>：您的選擇及選擇時間記錄於瀏覽器 localStorage，保存 12 個月；屆滿後、或您清除瀏覽器資料後，我們會再次詢問。</li>
+        <li>您可隨時點選網站頁尾之「Cookie 設定」變更或撤回您的同意；撤回後我們將停止使用分析 Cookie，撤回不影響撤回前處理之合法性。</li>
+        <li>您亦可透過瀏覽器設定刪除或封鎖 Cookie，或安裝 Google 提供之 Google Analytics 停用瀏覽器外掛程式（<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a>）。封鎖必要 Cookie 可能影響網站部分功能。</li>
+      </ul>
+
+      <h2>4. Google Analytics 4 之設定</h2>
+      <p>我們使用 Google Analytics 4 取得網站使用之統計資料。GA4 不會記錄或儲存 IP 位址。我們未啟用 Google 信號（Google Signals）及廣告個人化功能。Google 如何使用相關資料，請參閱：<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></p>
+    </div>
+  </div>
+</section>

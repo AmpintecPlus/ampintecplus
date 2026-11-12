@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: Contact Us | Metal 3D Printing Inquiry
+description: Contact AMPINTEC PLUS about metal 3D printing contract manufacturing. Submit the form and we'll get back to you within 1-2 business days, or reach us directly by phone or email.
+---
+{% set i = i18n.en %}
+
+<section class="section section-light" id="contact" style="background-color: #FFFFFF; border-top: 1px solid rgba(26,26,26,0.05);">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.contact }}</span>
+      <h1 class="section-title">{{ i.contact.title }}</h1>
+    </div>
+
+    <div class="contact-layout">
+      <!-- Contact info -->
+      <div class="contact-info">
+        <h3>{{ i.contact.info_title }}</h3>
+        <p class="contact-info-desc">{{ i.contact.info_desc }}</p>
+
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">✉️</span>
+            <div>
+              <span class="contact-detail-label">Email</span>
+              <div class="contact-detail-val"><a href="mailto:{{ i.contact.email_val }}">{{ i.contact.email_val }}</a></div>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">📞</span>
+            <div>
+              <span class="contact-detail-label">{{ i.contact.phone_label }}</span>
+              <div class="contact-detail-val">{{ i.contact.phone_val }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <form class="contact-form" id="js-contact-form" novalidate data-endpoint="{{ site.formEndpoint }}" data-sales-email="{{ company.email }}">
+        <input type="hidden" name="lang" value="{{ lang }}">
+        <input type="hidden" name="page" value="{{ page.url }}">
+
+        <!-- Honeypot: invisible to regular visitors; bots often auto-fill it, and any value marks the submission as spam -->
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="company">{{ i.contact.label_company }}</label>
+            <input class="form-input" type="text" id="company" name="company" required placeholder="{{ i.contact.placeholder_company }}">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="name">{{ i.contact.label_name }}</label>
+            <input class="form-input" type="text" id="name" name="name" required placeholder="{{ i.contact.placeholder_name }}">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="job">{{ i.contact.label_job }}</label>
+            <input class="form-input" type="text" id="job" name="job" placeholder="{{ i.contact.placeholder_job }}">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">{{ i.contact.label_email }}</label>
+            <input class="form-input" type="email" id="email" name="email" required placeholder="{{ i.contact.placeholder_email }}">
+          </div>
+          <div class="form-group form-group-full">
+            <label class="form-label" for="phone">{{ i.contact.label_phone }}</label>
+            <input class="form-input" type="tel" id="phone" name="phone" required placeholder="{{ i.contact.placeholder_phone }}">
+          </div>
+          <div class="form-group form-group-full">
+            <label class="form-label" for="description">{{ i.contact.label_desc }}</label>
+            <textarea class="form-input" id="description" name="description" required placeholder="{{ i.contact.placeholder_desc }}"></textarea>
+            <p class="form-hint">{{ i.contact.sensitive_hint }}</p>
+          </div>
+        </div>
+
+        <label class="form-consent" for="consent">
+          <input type="checkbox" id="consent" required>
+          <span>{{ i.contact.consent_before }} <a href="{{ ('/en/privacy/') | url }}" target="_blank" rel="noopener noreferrer">{{ i.contact.consent_link }}</a> {{ i.contact.consent_after }}</span>
+        </label>
+
+        <button class="btn btn-primary" type="submit" style="width: 100%;">{{ i.contact.btn_submit }}</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Toast -->
+<div class="toast" id="js-toast">
+  <span class="toast-icon">✓</span>
+  <span class="toast-text" id="js-toast-text"></span>
+</div>
+
+<script src="{{ '/assets/js/form.js' | url }}"></script>

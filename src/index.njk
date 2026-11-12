@@ -1,0 +1,99 @@
+---
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMPINTEC PLUS</title>
+
+  <link rel="canonical" href="{{ site.siteUrl }}/en/">
+  <link rel="alternate" hreflang="zh-TW" href="{{ site.siteUrl }}/zh/">
+  <link rel="alternate" hreflang="en" href="{{ site.siteUrl }}/en/">
+  <link rel="alternate" hreflang="x-default" href="{{ site.siteUrl }}/en/">
+
+  {%- if not site.indexing %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+
+  <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+
+  <style>
+    .lang-select-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-dark-bg);
+      color: var(--color-white);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .lang-select-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-select-wrap">
+    <div>
+      <img src="{{ '/assets/img/ampintec-logo.webp' | url }}" alt="AMPINTEC PLUS" width="1920" height="1172" style="height: 48px; width: auto; margin-bottom: 24px;">
+      <p>Please choose your language ｜ 請選擇語言</p>
+      <div class="lang-select-links">
+        <a class="btn btn-primary" id="js-lang-zh" href="{{ '/zh/' | url }}">中文</a>
+        <a class="btn btn-secondary" id="js-lang-en" href="{{ '/en/' | url }}">English</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var ZH_URL = "{{ '/zh/' | url }}";
+      var EN_URL = "{{ '/en/' | url }}";
+      var CONSENT_LANG_KEY = 'ampintec_lang';
+
+      // 搜尋引擎／社群爬蟲不導向，留在這個語言選擇頁（含上面兩個可點連結與 hreflang）
+      var botPattern = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|linkedinbot/i;
+      if (botPattern.test(navigator.userAgent)) {
+        return;
+      }
+
+      function pickLang() {
+        try {
+          var saved = localStorage.getItem(CONSENT_LANG_KEY);
+          if (saved === 'zh' || saved === 'en') return saved;
+        } catch (e) { /* localStorage 無法使用時，略過已儲存的選擇 */ }
+
+        var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+        for (var i = 0; i < langs.length; i++) {
+          if (/^zh/i.test(langs[i])) return 'zh';
+        }
+        return 'en';
+      }
+
+      var lang = pickLang();
+      var target = (lang === 'zh' ? ZH_URL : EN_URL) + window.location.search + window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+
+  <noscript>
+    <div class="lang-select-wrap">
+      <div>
+        <p>Please choose your language ｜ 請選擇語言</p>
+        <div class="lang-select-links">
+          <a class="btn btn-primary" href="{{ '/zh/' | url }}">中文</a>
+          <a class="btn btn-secondary" href="{{ '/en/' | url }}">English</a>
+        </div>
+      </div>
+    </div>
+  </noscript>
+</body>
+</html>

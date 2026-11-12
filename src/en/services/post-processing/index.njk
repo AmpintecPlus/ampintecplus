@@ -1,0 +1,133 @@
+---
+layout: base.njk
+title: Metal 3D Printing Post-Processing Services
+description: AMPINTEC PLUS offers one-stop post-processing including machining, laser, waterjet, polishing (up to Ra 0.1–0.01 µm mirror finish), welding, casting, and forging — from printing to delivery in one place.
+---
+{% set i = i18n.en %}
+
+<section class="section section-dark" id="post-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.service_post_title }}</span>
+      <h1 class="section-title">{{ i.technology.capability_title }}</h1>
+      <!-- DRAFT: pending 黃總 review, see COPY_REVIEW.md -->
+      <p class="section-subtitle">{{ i.servicesPage.post_answer }}</p>
+      <p class="section-subtitle">{{ i.home.service_post_desc }}</p>
+    </div>
+
+    <div class="capabilities-wrap">
+      <div class="cap-categories">
+        <button class="cap-cat-btn active" data-cat="machining">{{ i.technology.cap_cats.machining }}</button>
+        <button class="cap-cat-btn" data-cat="laser">{{ i.technology.cap_cats.laser }}</button>
+        <button class="cap-cat-btn" data-cat="waterjet">{{ i.technology.cap_cats.waterjet }}</button>
+        <button class="cap-cat-btn" data-cat="polishing">{{ i.technology.cap_cats.polishing }}</button>
+        <button class="cap-cat-btn" data-cat="welding">{{ i.technology.cap_cats.welding }}</button>
+        <button class="cap-cat-btn" data-cat="casting">{{ i.technology.cap_cats.casting }}</button>
+        <button class="cap-cat-btn" data-cat="forging">{{ i.technology.cap_cats.forging }}</button>
+      </div>
+
+      <div class="cap-panels">
+        <div class="cap-panel active" id="panel-machining">
+          <div class="cap-panel-content">
+            <p class="panel-desc">{{ i.technology.cap_panels.machining.desc }}</p>
+            <div class="panel-details">
+              <span class="detail-label">{{ i.technology.cap_panels.machining.sub_label }}</span>
+              <div class="panel-detail-badges">
+                <span class="cap-detail-badge">{{ i.technology.cap_panels.machining.sub1 }}</span>
+                <span class="cap-detail-badge">{{ i.technology.cap_panels.machining.sub2 }}</span>
+                <span class="cap-detail-badge">{{ i.technology.cap_panels.machining.sub3 }}</span>
+                <span class="cap-detail-badge">{{ i.technology.cap_panels.machining.sub4 }}</span>
+                <span class="cap-detail-badge">{{ i.technology.cap_panels.machining.sub5 }}</span>
+                <span class="cap-detail-badge">{{ i.technology.cap_panels.machining.sub6 }}</span>
+              </div>
+              <div class="panel-details">
+                <span class="detail-label">{{ i.cases.hole_title }}:</span>
+                <span class="cap-detail-badge">{{ i.cases.hole_desc }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cap-panel" id="panel-laser">
+          <div class="cap-panel-content">
+            <p class="panel-desc">{{ i.technology.cap_panels.laser.desc }}</p>
+          </div>
+        </div>
+
+        <div class="cap-panel" id="panel-waterjet">
+          <div class="cap-panel-content">
+            <p class="panel-desc">{{ i.technology.cap_panels.waterjet.desc }}</p>
+          </div>
+        </div>
+
+        <div class="cap-panel" id="panel-polishing">
+          <div class="cap-panel-content">
+            <p class="panel-desc">{{ i.technology.cap_panels.polishing.desc }}</p>
+          </div>
+        </div>
+
+        <div class="cap-panel" id="panel-welding">
+          <div class="cap-panel-content">
+            <p class="panel-desc">{{ i.technology.cap_panels.welding.desc }}</p>
+          </div>
+        </div>
+
+        <div class="cap-panel" id="panel-casting">
+          <div class="cap-panel-content">
+            <p class="panel-desc">{{ i.technology.cap_panels.casting.desc }}</p>
+          </div>
+        </div>
+
+        <div class="cap-panel" id="panel-forging">
+          <div class="cap-panel-content">
+            <p class="panel-desc">{{ i.technology.cap_panels.forging.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Other processes: FDM / SLA / SLS -->
+<section class="section section-light" id="other-processes">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ i.technology.tech_cat_title }}</h2>
+    </div>
+    <div class="tech-categories">
+      <div class="category-card">
+        <h4>{{ i.technology.cat1_title }}</h4>
+        <p>{{ i.technology.cat1_desc }}</p>
+      </div>
+      <div class="category-card">
+        <h4>{{ i.technology.cat2_title }}</h4>
+        <p>{{ i.technology.cat2_desc }}</p>
+      </div>
+      <div class="category-card">
+        <h4>{{ i.technology.cat3_title }}</h4>
+        <p>{{ i.technology.cat3_desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="post-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/en/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ i.home.service_post_title | safe }}",
+  "description": "{{ i.home.service_post_desc | safe }}",
+  "provider": { "@id": "{{ site.siteUrl }}/#organization" }
+}
+</script>

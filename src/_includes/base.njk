@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{%- set altLang = 'en' if lang == 'zh' else 'zh' -%}
+{%- set zhUrl = page.url | replace('/' ~ lang ~ '/', '/zh/') -%}
+{%- set enUrl = page.url | replace('/' ~ lang ~ '/', '/en/') -%}
+{%- set altUrl = enUrl if lang == 'zh' else zhUrl -%}
+<html lang="{{ 'zh-Hant-TW' if lang == 'zh' else 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ title }} | AMPINTEC PLUS</title>
+  <meta name="description" content="{{ description }}">
+
+  <link rel="canonical" href="{{ site.siteUrl }}{{ page.url }}">
+  <link rel="alternate" hreflang="zh-TW" href="{{ site.siteUrl }}{{ zhUrl }}">
+  <link rel="alternate" hreflang="en" href="{{ site.siteUrl }}{{ enUrl }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.siteUrl }}{{ enUrl }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AMPINTEC PLUS">
+  <meta property="og:title" content="{{ title }} | AMPINTEC PLUS">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ site.siteUrl }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.siteUrl }}/assets/img/og-default.webp">
+  <meta property="og:locale" content="{{ 'zh_TW' if lang == 'zh' else 'en_US' }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
+
+  {%- if not site.indexing %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- if heroImage %}
+  <link rel="preload" as="image" href="{{ heroImage | url }}" fetchpriority="high">
+  {%- endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+
+  <noscript>
+    <style>
+      /* 關掉 JS 時，確保手機選單、FAQ、痛點卡片、Tab 面板的內容仍完整可讀（CLAUDE.md §4） */
+      .nav-toggle { display: none !important; }
+      .nav-menu { display: flex !important; flex-direction: column; position: static !important; }
+      .faq-answer, .painpoint-card-body { max-height: none !important; }
+      .cap-panel { display: block !important; }
+    </style>
+  </noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "{{ site.siteUrl }}/#organization",
+    "name": "{{ company.nameEn }}",
+    "alternateName": ["{{ company.nameZh }}", "AMPINTEC PLUS"],
+    "url": "{{ site.siteUrl }}/",
+    "logo": "{{ site.siteUrl }}/assets/img/ampintec-logo.png",
+    "email": "{{ company.email }}",
+    "telephone": "+886-975-067-383",
+    "taxID": "{{ company.taxId }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12F., No. 130, Sec. 4, Chongyang Rd.",
+      "addressLocality": "Sanchong Dist.",
+      "addressRegion": "New Taipei City",
+      "addressCountry": "TW"
+    },
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "AS9100D" },
+      { "@type": "EducationalOccupationalCredential", "name": "ISO 9001" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+886-975-067-383",
+      "email": "{{ company.email }}",
+      "contactType": "sales",
+      "availableLanguage": ["zh-TW", "en"]
+    },
+    "countryOfOrigin": { "@type": "Country", "name": "TW" },
+    "areaServed": "Worldwide",
+    "knowsAbout": [
+      "品質 Quality",
+      "一條龍服務 One-stop service",
+      "包含精加工 Precision machining included",
+      "後處理 Post-processing",
+      "加速研發 Accelerate R&D"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "{{ site.siteUrl }}/#website",
+    "name": "AMPINTEC PLUS",
+    "url": "{{ site.siteUrl }}/",
+    "inLanguage": ["zh-Hant-TW", "en"],
+    "publisher": { "@id": "{{ site.siteUrl }}/#organization" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "{{ site.siteUrl }}{{ page.url }}",
+    "inLanguage": "{{ 'zh-Hant-TW' if lang == 'zh' else 'en' }}",
+    "dateModified": "{{ page.date | ymd }}",
+    "isPartOf": { "@id": "{{ site.siteUrl }}/#website" }
+  }
+  </script>
+  {%- set breadcrumbTrail = page.url | breadcrumbTrail(lang, nav, footerNav, i18n) %}
+  {%- if breadcrumbTrail.length > 1 %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {%- for crumb in breadcrumbTrail %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "name": "{{ crumb.label | safe }}",
+        "item": "{{ site.siteUrl }}{{ crumb.url }}"
+      }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]
+  }
+  </script>
+  {%- endif %}
+</head>
+<body>
+  {% include "header.njk" %}
+
+  <main>
+    {%- if breadcrumbTrail.length > 1 %}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list container">
+        {%- for crumb in breadcrumbTrail %}
+        <li class="breadcrumb-item">
+          {%- if crumb.current -%}
+          <span aria-current="page">{{ crumb.label }}</span>
+          {%- else -%}
+          <a href="{{ crumb.url | url }}">{{ crumb.label }}</a>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    {%- endif %}
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <!-- Cookie 同意橫幅：預設隱藏，consent.js 依 localStorage 狀態決定是否顯示 -->
+  <div class="cookie-banner" id="js-cookie-banner" hidden
+    data-consent-key="{{ site.consentKey }}"
+    data-consent-max-age-days="{{ site.consentMaxAgeDays }}"
+    data-ga-id="{{ site.gaId }}">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text">{{ i18n[lang].cookieBanner.text_before }}<a href="{{ ('/' ~ lang ~ '/privacy/') | url }}" target="_blank" rel="noopener noreferrer">{{ i18n[lang].cookieBanner.link_privacy }}</a>{{ i18n[lang].cookieBanner.text_between }}<a href="{{ ('/' ~ lang ~ '/cookies/') | url }}" target="_blank" rel="noopener noreferrer">{{ i18n[lang].cookieBanner.link_cookies }}</a>{{ i18n[lang].cookieBanner.text_after }}</p>
+      <div class="cookie-banner-actions">
+        <button type="button" id="js-cookie-accept" class="btn btn-primary">{{ i18n[lang].cookieBanner.accept_label }}</button>
+        <button type="button" id="js-cookie-reject" class="btn btn-secondary">{{ i18n[lang].cookieBanner.reject_label }}</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | url }}"></script>
+  <script src="{{ '/assets/js/consent.js' | url }}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var langSwitch = document.getElementById('js-lang-switch');
+      if (langSwitch) {
+        langSwitch.addEventListener('click', function () {
+          try { localStorage.setItem('ampintec_lang', '{{ altLang }}'); } catch (e) {}
+        });
+      }
+    });
+  </script>
+</body>
+</html>

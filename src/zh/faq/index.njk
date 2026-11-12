@@ -1,0 +1,72 @@
+---
+layout: base.njk
+title: 常見問題 FAQ｜金屬3D列印代工
+description: AMPINTEC PLUS 常見問題解答，包含最小訂購量、交期、圖檔格式、機密保護與小量客製等金屬3D列印代工相關問題。
+---
+{% set i = i18n.zh %}
+
+<section class="section section-light" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.faq }}</span>
+      <h1 class="section-title">{{ i.faq.title }}</h1>
+    </div>
+
+    <div class="faq-wrap">
+      {%- for n in [1,2,3,4,5] %}
+      <div class="faq-item">
+        <div class="faq-question">{{ i.faq['q' ~ n] }}</div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">{{ i.faq['a' ~ n] }}</div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <!-- DRAFT: Q6-Q13 為新增題目,待黃總審核,見 COPY_REVIEW.md。
+         核准前不列入下方 FAQPage JSON-LD。 -->
+    <div class="section-header" style="margin-top: 60px;">
+      <p class="section-subtitle">草稿．新增題目，待黃總審核</p>
+    </div>
+    <div class="faq-wrap">
+      {%- for n in [6,7,8,9,10,11,12,13] %}
+      <div class="faq-item">
+        <div class="faq-question">{{ i.faq['q' ~ n] }}</div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">{{ i.faq['a' ~ n] }}</div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="faq-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/zh/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for n in [1,2,3,4,5] %}
+    {
+      "@type": "Question",
+      "name": "{{ i.faq['q' ~ n] | safe }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ i.faq['a' ~ n] | safe }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>

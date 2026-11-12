@@ -1,0 +1,21 @@
+{
+  "_comment": "T07 移除第三方圖片時保留的外部案例來源連結，供 T14 建置 /industries/ 頁面『產業趨勢參考』區塊使用。對應文案 key 見 i18n zh/en.json 的 cases.spacex_*／leap71_*／lions_*／apple_*。",
+  "items": [
+    {
+      "key": "spacex",
+      "url": "https://www.teslaoracle.com/2024/08/08/raptor-3-starship-engine-is-lighter-less-complicated-but-more-powerful-and-reusable/"
+    },
+    {
+      "key": "leap71",
+      "url": "https://leap71.com/"
+    },
+    {
+      "key": "lions",
+      "url": "https://resources.ntop.com/resources/blog/design-tips-structural-optimization-lightweighting/"
+    },
+    {
+      "key": "apple",
+      "url": "https://www.apple.com/tw/newsroom/2025/11/mapping-the-future-with-3d-printed-titanium-apple-watch-cases/"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+---
+layout: base.njk
+title: 關於我們｜品牌故事與創辦團隊
+description: AMPINTEC PLUS 自2015年投入積層製造技術，2025年正式成立品牌，整合金屬3D列印與傳統機械加工，提供MIT一站式設計製造解決方案，了解我們的發展歷程與創辦團隊。
+---
+{% set i = i18n.zh %}
+
+<section class="section section-light" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.about }}</span>
+      <h1 class="section-title">{{ i.about.title }}</h1>
+    </div>
+
+    <div class="about-layout">
+      <!-- 發展歷程 -->
+      <div class="about-left">
+        <h3>{{ i.about.timeline_title }}</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">{{ i.about.t1_year }}</div>
+            <p class="timeline-desc">{{ i.about.t1_desc }}</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">{{ i.about.t2_year }}</div>
+            <p class="timeline-desc">{{ i.about.t2_desc }}</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">{{ i.about.t3_year }}</div>
+            <p class="timeline-desc">{{ i.about.t3_desc }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 創辦團隊 -->
+      <div class="about-right">
+        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 30px; position: relative; padding-bottom: 10px; border-bottom: 2px solid rgba(26,26,26,0.1); width: fit-content;">{{ i.about.team_title }}</h3>
+        <div class="founders-grid">
+          <div class="founder-card">
+            <div class="founder-header">
+              <div class="founder-name">{{ i.about.f1_name }}</div>
+              <div class="founder-title">{{ i.about.f1_title }}</div>
+            </div>
+            <p class="founder-desc">{{ i.about.f1_desc }}</p>
+          </div>
+          <div class="founder-card">
+            <div class="founder-header">
+              <div class="founder-name">{{ i.about.f2_name }}</div>
+              <div class="founder-title">{{ i.about.f2_title }}</div>
+            </div>
+            <p class="founder-desc">{{ i.about.f2_desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 量化評比：傳統製造／一般3D列印代工／AMPINTEC PLUS -->
+    <div class="section-header" style="margin-top: 60px; margin-bottom: 8px;">
+      <span class="eyebrow">{{ i.nav.advantages }}</span>
+      <h2 class="section-title">{{ i.advantages.title }}</h2>
+      <p class="section-subtitle" style="font-size: 1.05rem; color: var(--color-gray-text); margin-top: 10px; margin-bottom: 0;">{{ i.advantages.chart_title }}</p>
+    </div>
+
+    <div class="vs-chart-wrap" id="js-advantages-chart-trigger">
+      <p style="text-align: center; margin-bottom: 25px; color: var(--color-gray-text); font-size: 0.9rem; margin-top: 30px;">
+        ※ <span>{{ i.advantages.chart_legend }}</span>
+      </p>
+
+      <div class="chart-legend" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 16px; height: 16px; background-color: var(--color-gray-text); border-radius: 3px;"></span>
+          <span style="font-size: 0.9rem; font-weight: 600;">{{ i.advantages.legend_traditional }}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 16px; height: 16px; background-color: #6B7A8F; border-radius: 3px;"></span>
+          <span style="font-size: 0.9rem; font-weight: 600;">{{ i.advantages.legend_generic_am }}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 16px; height: 16px; background-color: var(--color-gold); border-radius: 3px; box-shadow: 0 0 5px rgba(201, 162, 39, 0.5);"></span>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-gold);">{{ i.advantages.legend_ampintec }}</span>
+        </div>
+      </div>
+
+      <div class="advantages-chart">
+        {%- for row in advantagesChart.metrics %}
+        <div class="chart-row{{ ' highlight-row' if row.noteKey }}">
+          {%- if row.noteKey %}
+          <div class="chart-label" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
+            <span style="font-weight: 800;">{{ i.advantages[row.labelKey] }}</span>
+            <small style="font-size: 0.75rem; color: var(--color-gold); font-weight: 500;">{{ i.advantages[row.noteKey] }}</small>
+          </div>
+          {%- else %}
+          <div class="chart-label"><span>{{ i.advantages[row.labelKey] }}</span></div>
+          {%- endif %}
+          <div class="chart-bars">
+            <div class="chart-bar-container">
+              <span class="bar-name">{{ i.advantages.bar_traditional }}</span>
+              <div class="bar-track"><div class="bar-fill bar-traditional" data-score="{{ row.scores.traditional }}" style="width: 0%;"></div></div>
+              <span class="bar-val">{{ row.scores.traditional }}</span>
+            </div>
+            <div class="chart-bar-container">
+              <span class="bar-name">{{ i.advantages.bar_generic_am }}</span>
+              <div class="bar-track"><div class="bar-fill bar-generic-am" data-score="{{ row.scores.genericAm }}" style="width: 0%;"></div></div>
+              <span class="bar-val">{{ row.scores.genericAm }}</span>
+            </div>
+            <div class="chart-bar-container">
+              <span class="bar-name">{{ i.advantages.bar_ampintec }}</span>
+              <div class="bar-track"><div class="bar-fill bar-ampintec" data-score="{{ row.scores.ampintec }}" style="width: 0%;"></div></div>
+              <span class="bar-val">{{ row.scores.ampintec }}</span>
+            </div>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <!-- 為什麼選擇台灣製造 -->
+    <div class="mit-wrap">
+      <h3>{{ i.advantages.mit_title }}</h3>
+      <div class="mit-table-wrap">
+        <table class="mit-table">
+          <thead>
+            <tr>
+              <th>{{ i.advantages.col_aspect }}</th>
+              <th>{{ i.advantages.col_oversea }}</th>
+              <th>{{ i.advantages.col_mit }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ i.advantages.mit_log }}</td>
+              <td>{{ i.advantages.mit_log_o }}</td>
+              <td>{{ i.advantages.mit_log_m }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.advantages.mit_comm }}</td>
+              <td>{{ i.advantages.mit_comm_o }}</td>
+              <td>{{ i.advantages.mit_comm_m }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.advantages.mit_lead }}</td>
+              <td>{{ i.advantages.mit_lead_o }}</td>
+              <td>{{ i.advantages.mit_lead_m }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.advantages.mit_ip }}</td>
+              <td>{{ i.advantages.mit_ip_o }}</td>
+              <td>{{ i.advantages.mit_ip_m }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="about-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/zh/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>

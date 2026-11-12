@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="container">
+    <a href="{{ ('/' ~ lang ~ '/') | url }}" class="logo-container">
+      <img src="{{ '/assets/img/ampintec-logo.webp' | url }}" alt="AMPINTEC PLUS" class="logo-img" width="1920" height="1172">
+    </a>
+
+    <button class="nav-toggle" id="js-nav-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="js-nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" id="js-nav-menu">
+      {%- for item in nav[lang] %}
+      <li><a href="{{ ('/' ~ lang ~ '/' ~ item.path) | url }}" class="nav-link">{{ item.label }}</a></li>
+      {%- endfor %}
+    </ul>
+
+    <div class="nav-actions">
+      <a href="{{ altUrl | url }}" class="lang-switch" id="js-lang-switch">{{ 'EN' if lang == 'zh' else '中文' }}</a>
+      <a href="{{ ('/' ~ lang ~ '/contact/') | url }}" class="btn btn-primary">{{ i18n[lang].nav.cta }}</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: Cookie Policy
+description: AmpintecPlus Cookie Policy describing the cookies and similar technologies used on this Website, their purpose and retention period, and how you can change or withdraw your consent.
+---
+{% set i = i18n.en %}
+
+<section class="section section-light" id="cookies">
+  <div class="container">
+    <div class="section-header">
+      <h1 class="section-title">Cookie Policy</h1>
+    </div>
+
+    <div class="legal-content">
+      <h2>1. What are cookies</h2>
+      <p>Cookies are small text files that a website stores in your browser on your device (computer, phone, etc.) to remember your preferences or measure how the website is used.</p>
+
+      <h2>2. Cookies and similar technologies</h2>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Name</th><th>Provider</th><th>Purpose</th><th>Duration</th><th>Essential?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Strictly necessary (localStorage, not a cookie)</td>
+            <td><code>{{ site.consentKey }}</code></td>
+            <td>AmpintecPlus</td>
+            <td>Records your analytics choice (accept or reject) and when you made it; contains no data that directly identifies you and is not sent to us or any third party</td>
+            <td>12 months, after which we ask again</td>
+            <td>Strictly necessary</td>
+          </tr>
+          <tr>
+            <td>Strictly necessary / functional (localStorage, not a cookie)</td>
+            <td><code>ampintec_lang</code></td>
+            <td>AmpintecPlus</td>
+            <td>Remembers the site language you chose; not sent to us or any third party</td>
+            <td>Until you clear your browser data</td>
+            <td>Strictly necessary (no consent needed)</td>
+          </tr>
+          <tr>
+            <td>Analytics</td>
+            <td><code>_ga</code></td>
+            <td>Google (Google Analytics 4)</td>
+            <td>Distinguishes visitors to measure Website usage</td>
+            <td>2 years</td>
+            <td>Non-essential, set only after consent</td>
+          </tr>
+          <tr>
+            <td>Analytics</td>
+            <td><code>_ga_<mark class="placeholder">[GA4 ID]</mark></code></td>
+            <td>Google (Google Analytics 4)</td>
+            <td>Persists session state</td>
+            <td>2 years</td>
+            <td>Non-essential, set only after consent</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>"localStorage" is storage built into your browser. It works like a cookie, but the data stays on your device and is not sent to the Website's server with each request. We use it only to remember your consent choice and your chosen site language; this is strictly necessary to provide the function you request, so no prior consent is needed.</p>
+      <p><mark class="placeholder">[Verify and update this table against the cookies and localStorage items actually used after the Website goes live.]</mark></p>
+      <p>Google Search Console provides us with aggregated data from Google Search about how the Website performs in Google search results (such as impressions, clicks and search queries). It does not place cookies on your device.</p>
+
+      <h2>3. Your choices</h2>
+      <ul>
+        <li><strong>All visitors worldwide</strong>: analytics cookies are off by default. We do not load Google Analytics 4 or set any analytics cookie until you click "Accept".</li>
+        <li><strong>Storage and renewal</strong>: your choice and its timestamp are stored in your browser's localStorage for 12 months; after that, or if you clear your browser data, we will ask you again.</li>
+        <li>You may change or withdraw your consent at any time via "Cookie settings" in the Website footer; we then stop using analytics cookies. Withdrawal does not affect the lawfulness of processing before withdrawal.</li>
+        <li>You can also delete or block cookies in your browser settings, or install the Google Analytics Opt-out Browser Add-on (<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a>). Blocking essential cookies may affect some Website functions.</li>
+      </ul>
+
+      <h2>4. Google Analytics 4 settings</h2>
+      <p>We use Google Analytics 4 to obtain statistics on Website usage. GA4 does not log or store IP addresses. We have not enabled Google Signals or ads personalization. For how Google uses this data, see: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></p>
+    </div>
+  </div>
+</section>

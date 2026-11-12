@@ -1,0 +1,22 @@
+{
+  "zh": [
+    { "key": "home", "label": "首頁", "path": "" },
+    { "key": "services", "label": "服務", "path": "services/" },
+    { "key": "materials", "label": "材料", "path": "materials/" },
+    { "key": "industries", "label": "應用產業", "path": "industries/" },
+    { "key": "quality", "label": "品質認證", "path": "quality/" },
+    { "key": "about", "label": "關於我們", "path": "about/" },
+    { "key": "faq", "label": "FAQ", "path": "faq/" },
+    { "key": "contact", "label": "聯絡我們", "path": "contact/" }
+  ],
+  "en": [
+    { "key": "home", "label": "Home", "path": "" },
+    { "key": "services", "label": "Services", "path": "services/" },
+    { "key": "materials", "label": "Materials", "path": "materials/" },
+    { "key": "industries", "label": "Industries", "path": "industries/" },
+    { "key": "quality", "label": "Quality", "path": "quality/" },
+    { "key": "about", "label": "About", "path": "about/" },
+    { "key": "faq", "label": "FAQ", "path": "faq/" },
+    { "key": "contact", "label": "Contact", "path": "contact/" }
+  ]
+}

@@ -1,0 +1,76 @@
+---
+layout: base.njk
+title: LPBF/SLM Metal 3D Printing Manufacturing
+description: AMPINTEC PLUS provides LPBF/SLM/MBJ metal 3D printing services, directly melting metal powder for high-strength, lightweight, complex internal channels in aerospace and semiconductor parts, with build sizes up to 300×300×300mm.
+---
+{% set i = i18n.en %}
+
+<section class="section section-dark" id="lpbf-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.home.service_lpbf_title }}</span>
+      <h1 class="section-title">{{ i.technology.cat4_title }}</h1>
+      <!-- DRAFT: pending 黃總 review, see COPY_REVIEW.md -->
+      <p class="section-subtitle">{{ i.servicesPage.lpbf_answer }}</p>
+      <p class="section-subtitle">{{ i.technology.cat4_desc }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Build size specifications -->
+<section class="section section-light" id="equipment">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.equipment }}</span>
+      <h2 class="section-title">{{ i.equipment.title }}</h2>
+    </div>
+    <div class="equipment-layout">
+      <div class="equipment-table-wrap">
+        <h3>{{ i.equipment.table_title }}</h3>
+        <table class="eq-table">
+          <thead>
+            <tr>
+              <th>{{ i.equipment.col_type }}</th>
+              <th>{{ i.equipment.col_size }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ i.equipment.type_metal }}</td>
+              <td>{{ i.equipment.size_metal }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.equipment.type_nylon }}</td>
+              <td>{{ i.equipment.size_nylon }}</td>
+            </tr>
+            <tr>
+              <td>{{ i.equipment.type_photo }}</td>
+              <td>{{ i.equipment.size_photo }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="lpbf-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/en/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ i.home.service_lpbf_title | safe }}",
+  "description": "{{ i.technology.cat4_desc | safe }}",
+  "provider": { "@id": "{{ site.siteUrl }}/#organization" }
+}
+</script>

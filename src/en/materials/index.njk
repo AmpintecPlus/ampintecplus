@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: Metal 3D Printing Materials | Aluminum, Titanium, Stainless Steel
+description: AMPINTEC PLUS metal 3D printing supports aluminum, titanium, stainless steel, nickel, copper alloys, and custom alloys, with a mechanical property comparison table against conventional metals available on request.
+---
+{% set i = i18n.en %}
+
+<section class="section section-dark" id="materials">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.nav.materials }}</span>
+      <h1 class="section-title">{{ i.materials.title }}</h1>
+      <!-- DRAFT: pending 黃總 review, see COPY_REVIEW.md -->
+      <p class="section-subtitle">{{ i.materials.answer_intro }}</p>
+    </div>
+
+    <div class="materials-grid">
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m1 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m2 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m3 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m4 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m5 | safe }}</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">⚙️</div>
+        <span class="material-name">{{ i.materials.m6 | safe }}</span>
+      </div>
+    </div>
+
+    <div class="materials-lead">
+      <span>{{ i.materials.lead_magnet }}</span>
+      <a href="{{ ('/en/contact/') | url }}">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>

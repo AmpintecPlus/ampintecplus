@@ -1,0 +1,133 @@
+---
+layout: base.njk
+title: Privacy Policy
+description: AmpintecPlus Privacy Policy explaining how we collect, process and use personal data through our website, as required under Taiwan's Personal Data Protection Act and, where applicable, the GDPR.
+---
+{% set i = i18n.en %}
+
+<section class="section section-light" id="privacy">
+  <div class="container">
+    <div class="section-header">
+      <h1 class="section-title">Privacy Policy</h1>
+    </div>
+
+    <div class="legal-content">
+      <p class="legal-effective-date">Effective date: <mark class="placeholder">[Effective date: the Website's official launch date]</mark></p>
+
+      <p>AmpintecPlus Co., Ltd. (安品特科技有限公司, "AmpintecPlus", "we", "us") respects your privacy. This Privacy Policy explains how we collect, process and use personal data through our website ampintecplus.com (the "Website"). It provides the notice required under Article 8 of Taiwan's Personal Data Protection Act ("PDPA") and, for users in the European Economic Area (EEA) or the United Kingdom, the information required under the EU General Data Protection Regulation ("GDPR") and the UK GDPR.</p>
+
+      <h2>1. Who we are (data collector / controller)</h2>
+      <ul>
+        <li>Company name: {{ company.nameEn }} ({{ company.nameZh }})</li>
+        <li>Taiwan Unified Business Number: {{ company.taxId }}</li>
+        <li>Registered address: {{ company.addressEn }}</li>
+        <li>Phone: +886-975-067-383</li>
+        <li>Email: <a href="mailto:{{ company.email }}">{{ company.email }}</a></li>
+      </ul>
+      <p>We are the collector of your personal data and the "controller" within the meaning of the GDPR.</p>
+
+      <h2>2. Purposes of collection</h2>
+      <p>We collect, process and use your personal data for the following specific purposes as defined under the PDPA:</p>
+      <table>
+        <thead>
+          <tr><th>Purpose code</th><th>Specific purpose</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>090</td><td>Consumer and customer management and services</td><td>Responding to inquiries submitted through our contact form or by email</td></tr>
+          <tr><td>069</td><td>Contracts, quasi-contracts and other legal relationships</td><td>Business communication with you or your company, including follow-up on the services you inquired about and communication before a quotation</td></tr>
+          <tr><td>135</td><td>Information and communication services</td><td>Operating and providing the Website</td></tr>
+          <tr><td>136</td><td>Information, communication and database management</td><td>Storing and managing contact form submissions</td></tr>
+          <tr><td>157</td><td>Surveys, statistics and research analysis</td><td>Statistical analysis of Website traffic and usage via Google Analytics 4 and Google Search Console to improve the Website</td></tr>
+        </tbody>
+      </table>
+      <p>We will not use the data you submit through the contact form for any other purpose, and we do not sell personal data. If we wish to use your data for marketing (for example, newsletters) in the future, we will ask for your separate consent.</p>
+
+      <h2>3. Categories of personal data</h2>
+      <table>
+        <thead>
+          <tr><th>Category code</th><th>Category</th><th>Data</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>C001</td><td>Personal identifiers</td><td>Name, email address, phone number; online identifiers (such as cookie IDs), device and browser information when you use the Website</td></tr>
+          <tr><td>C061</td><td>Current employment</td><td>Name of the company you work for</td></tr>
+          <tr><td>—</td><td>Other</td><td>Any information you choose to include in the "Message" field; statistical data on Website usage (such as pages viewed, referral source, time on page, approximate location)</td></tr>
+        </tbody>
+      </table>
+      <p>Please do not include sensitive personal data (such as medical records, health, genetic, sex life or criminal record data) in your message.</p>
+
+      <h2>4. Period, area, recipients and method of use</h2>
+      <h3>(1) Period</h3>
+      <ul>
+        <li>Contact form data: retained for as long as needed for the purposes above and deleted or anonymized after 3 years after our last communication with you, unless a longer period is required by law or is necessary to handle disputes or establish, exercise or defend legal claims.</li>
+        <li>Website analytics data: retained according to our Google Analytics 4 data retention setting of 2 months.</li>
+        <li>Lifetimes of cookies and similar technologies (including the consent record stored in your browser's localStorage): see the Cookie Policy below.</li>
+      </ul>
+
+      <h3>(2) Area</h3>
+      <p>Your personal data is used in Taiwan (Republic of China). Because we use services provided by Google (Google Sheets, Google Analytics 4, Google Search Console and Gmail / Google Workspace), your data may be stored or processed by Google outside Taiwan, including in the United States and other countries where Google operates data centers.</p>
+
+      <h3>(3) Recipients</h3>
+      <ul>
+        <li>Our staff responsible for responding to inquiries and business communication;</li>
+        <li>Service providers processing data on our behalf: Google LLC and its affiliates (providing Google Sheets, email, Google Analytics 4 and Google Search Console), acting only on our instructions;</li>
+        <li>Website hosting provider: GitHub, Inc. (USA, providing GitHub Pages), which may process visitors' IP addresses and technical request data (server logs) to deliver and secure the Website;</li>
+        <li>Courts or other competent authorities where required by law.</li>
+      </ul>
+      <p>Other than as described above, we do not disclose your personal data to third parties.</p>
+
+      <h3>(4) Method</h3>
+      <p>Personal data is collected, processed and used by automated and non-automated means (including email, telephone, paper and electronic files). Specifically, when you submit the contact form, your data is stored in our Google Sheets spreadsheet and sent by email to <a href="mailto:{{ company.email }}">{{ company.email }}</a>, so that our staff can reply to you.</p>
+
+      <h2>5. Your rights under Article 3 of the PDPA and how to exercise them</h2>
+      <p>You may exercise the following rights regarding your personal data held by us:</p>
+      <ol>
+        <li>To inquire about and review your data;</li>
+        <li>To request a copy of your data;</li>
+        <li>To request supplementation or correction;</li>
+        <li>To request that we stop collecting, processing or using your data;</li>
+        <li>To request deletion.</li>
+      </ol>
+      <p>How to exercise: email <a href="mailto:{{ company.email }}">{{ company.email }}</a> with your name, contact details and request. To protect your data, we may ask for information to verify your identity. We will respond within the periods set by the PDPA (generally 15 days for requests to inquire, review or obtain a copy, and 30 days for requests to supplement, correct, stop use or delete; these periods may be extended as permitted by law, with written notice of the reason). Under Article 14 of the PDPA, we may charge a fee covering necessary costs for inquiry, review or copies. In certain circumstances permitted under Articles 10 and 11 of the PDPA, we may decline a request and will inform you of the reason in writing.</p>
+
+      <h2>6. Effect of not providing personal data</h2>
+      <p>Providing personal data is voluntary. If you do not provide the required fields of the contact form (name, company, email, phone and message) or provide inaccurate information, we may be unable to reply to your inquiry or contact you for business purposes. Your phone number is used only to reply to your inquiry or to contact you about it. We do not load Google Analytics 4 until you consent; declining or not responding does not affect your ability to use the main functions of the Website.</p>
+
+      <h2>7. Additional information for EEA and UK users (GDPR)</h2>
+      <h3>(1) Legal bases</h3>
+      <ul>
+        <li>Responding to inquiries and business communication: necessary to take steps at your request prior to entering into a contract (GDPR Art. 6(1)(b)); where you contact us on behalf of a company, our legitimate interest in responding to business inquiries and maintaining business relationships (Art. 6(1)(f)).</li>
+        <li>Website analytics (Google Analytics 4): your consent (Art. 6(1)(a)). We do not place analytics cookies on your device before you consent. You may withdraw consent at any time, without affecting the lawfulness of processing before withdrawal.</li>
+        <li>Compliance with legal obligations (Art. 6(1)(c)) and the establishment, exercise or defense of legal claims (Art. 6(1)(f)).</li>
+      </ul>
+
+      <h3>(2) International transfers</h3>
+      <p>We are located in Taiwan. As of the effective date of this policy, the European Commission has not adopted an adequacy decision for Taiwan. When you provide data directly to us through the Website, it will be processed in Taiwan. The Google services we use may transfer data to the United States or other countries; for such transfers, Google relies on appropriate safeguards under its data processing terms, such as the European Commission's Standard Contractual Clauses (SCCs) and/or the EU-U.S. Data Privacy Framework. The Website is hosted by GitHub, Inc.; visitors' IP addresses and server logs may be processed in the United States, with transfers relying on appropriate safeguards offered by GitHub (such as the EU-U.S. Data Privacy Framework and/or SCCs). Contact us for more information on these safeguards.</p>
+
+      <h3>(3) Your rights</h3>
+      <p>Under the GDPR you have the right of access, rectification, erasure, restriction of processing, data portability, the right to object to processing based on legitimate interests, and the right to withdraw consent at any time. You also have the right to lodge a complaint with the data protection supervisory authority in your place of residence, place of work or place of the alleged infringement. To exercise your rights, contact <a href="mailto:{{ company.email }}">{{ company.email }}</a>. We will generally respond within one month of receiving your request.</p>
+
+      <h3>(4) Automated decision-making</h3>
+      <p>We do not use your personal data for automated decision-making or profiling that produces legal or similarly significant effects on you.</p>
+
+      <h3>(5) EU/UK representative</h3>
+      <p><mark class="placeholder">[If an EU/UK representative is required under GDPR Art. 27, insert their name and contact details here; otherwise delete this item.]</mark></p>
+
+      <h2>8. Security</h2>
+      <p>We take reasonable technical and organizational measures to protect your personal data, such as limiting access to our Google Sheets spreadsheet and mailbox to staff who need it, and using HTTPS encryption. However, no transmission over the internet is completely secure. If personal data is stolen, leaked, altered or otherwise compromised, we will notify you in an appropriate manner as required by law after investigation.</p>
+
+      <h2>9. Minors</h2>
+      <p>The Website is intended for business customers and is not directed at minors. We do not knowingly collect personal data from minors.</p>
+
+      <h2>10. Third-party websites</h2>
+      <p>The Website may contain links to third-party websites. This policy does not apply to those websites; please refer to their privacy policies.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>We may update this policy due to changes in law or our services. The updated version will be posted on the Website with a new effective date. If a change materially alters the purposes for which we use your personal data, we will notify you as required by law and obtain your consent where necessary.</p>
+
+      <h2>12. Contact us</h2>
+      <p>For questions about this policy or your personal data, contact: {{ company.nameEn }} | Email: <a href="mailto:{{ company.email }}">{{ company.email }}</a> | Phone: +886-975-067-383 | Address: {{ company.addressEn }}</p>
+
+      <p>In the event of any inconsistency between the Chinese and English versions, the Traditional Chinese version prevails.</p>
+    </div>
+  </div>
+</section>

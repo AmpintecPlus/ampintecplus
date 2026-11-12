@@ -1,0 +1,77 @@
+---
+layout: base.njk
+title: 應用產業｜航太、半導體、工業設備
+description: AMPINTEC PLUS 金屬3D列印應用於航太、半導體、模具與工具、工業設備及非侵入式醫療器材等產業，提供原型打樣、小批量生產與零件重製服務。
+---
+{% set i = i18n.zh %}
+
+<!-- DRAFT: 五段產業介紹為新寫文字，待黃總審核，見 COPY_REVIEW.md -->
+<section class="section section-dark" id="industries-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">{{ i.industriesPage.title }}</span>
+      <h1 class="section-title">{{ i.industriesPage.title }}</h1>
+      <!-- DRAFT: 待黃總審核,見 COPY_REVIEW.md -->
+      <p class="section-subtitle">{{ i.industriesPage.answer_intro }}</p>
+      <p class="section-subtitle">{{ i.industriesPage.intro }}</p>
+    </div>
+
+    <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-icon">✈️</div>
+        <h4>{{ i.industriesPage.aerospace_title }}</h4>
+        <p>{{ i.industriesPage.aerospace_desc }}</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">💾</div>
+        <h4>{{ i.industriesPage.semiconductor_title }}</h4>
+        <p>{{ i.industriesPage.semiconductor_desc }}</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🔧</div>
+        <h4>{{ i.industriesPage.mold_title }}</h4>
+        <p>{{ i.industriesPage.mold_desc }}</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">⚙️</div>
+        <h4>{{ i.industriesPage.industrial_title }}</h4>
+        <p>{{ i.industriesPage.industrial_desc }}</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🏥</div>
+        <h4>{{ i.industriesPage.medical_title }}</h4>
+        <p>{{ i.industriesPage.medical_desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DRAFT: 產業參考案例開頭標註與區塊，待黃總/法務審閱，見 COPY_REVIEW.md -->
+<section class="section section-light" id="industry-trends">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ i.industriesPage.trends_title }}</h2>
+      <p class="section-subtitle">※ {{ i.industriesPage.trends_disclaimer }}</p>
+    </div>
+    <div class="tech-categories">
+      {%- for item in industryTrends.items %}
+      <div class="category-card">
+        <h4>{{ i.cases[item.key ~ '_title'] }}</h4>
+        <p>{{ i.cases[item.key ~ '_desc'] }}</p>
+        <p><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ i.cases.ref_label }}</a></p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" id="industries-cta">
+  <div class="container home-cta-wrap">
+    <h2 class="section-title">{{ i.home.cta_title }}</h2>
+    <p>{{ i.contact.info_desc }}</p>
+    <div class="hero-btns" style="justify-content:center; margin-top: 24px;">
+      <a href="{{ ('/zh/contact/') | url }}" class="btn btn-primary">{{ i.nav.cta }}</a>
+    </div>
+  </div>
+</section>
