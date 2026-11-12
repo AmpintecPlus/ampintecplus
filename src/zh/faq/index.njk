@@ -22,6 +22,22 @@ description: AMPINTEC PLUS 常見問題解答，包含最小訂購量、交期�
       </div>
       {%- endfor %}
     </div>
+
+    <!-- DRAFT: Q6-Q13 為新增題目,待黃總審核,見 COPY_REVIEW.md。
+         核准前不列入下方 FAQPage JSON-LD。 -->
+    <div class="section-header" style="margin-top: 60px;">
+      <p class="section-subtitle">草稿．新增題目，待黃總審核</p>
+    </div>
+    <div class="faq-wrap">
+      {%- for n in [6,7,8,9,10,11,12,13] %}
+      <div class="faq-item">
+        <div class="faq-question">{{ i.faq['q' ~ n] }}</div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">{{ i.faq['a' ~ n] }}</div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
   </div>
 </section>
 

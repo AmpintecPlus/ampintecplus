@@ -22,6 +22,22 @@ description: Answers to common questions about AMPINTEC PLUS metal 3D printing c
       </div>
       {%- endfor %}
     </div>
+
+    <!-- DRAFT: Q6-Q13 are newly proposed questions pending 黃總 review, see COPY_REVIEW.md.
+         Not included in the FAQPage JSON-LD below until approved. -->
+    <div class="section-header" style="margin-top: 60px;">
+      <p class="section-subtitle">Draft — additional questions pending review</p>
+    </div>
+    <div class="faq-wrap">
+      {%- for n in [6,7,8,9,10,11,12,13] %}
+      <div class="faq-item">
+        <div class="faq-question">{{ i.faq['q' ~ n] }}</div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">{{ i.faq['a' ~ n] }}</div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
   </div>
 </section>
 
